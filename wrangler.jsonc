@@ -9,7 +9,7 @@
   },
   "d1_databases": [
     {
-      "binding": "FEHB_D1",
+      "binding": "DB",
       "database_name": "fehb-management-db",
       "database_id": "4b560e6e-6f7c-41b4-ac67-fbab61312418"
     }
