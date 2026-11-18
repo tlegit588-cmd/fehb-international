@@ -1,42 +1,1049 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#102b46">
-<meta name="description" content="FEHB International — giving hope through education, skills and inclusion.">
-<title>FEHB International | Management Portal</title>
-<style>
-:root{--navy:#102b46;--green:#176b58;--ink:#1b2b3a;--muted:#718096;--bg:#f4f7fa;--line:#e5ebf0}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,system-ui,sans-serif}button,input,select{font:inherit}button{cursor:pointer}.sidebar{position:fixed;inset:0 auto 0 0;width:258px;background:var(--navy);color:white;padding:22px 15px;display:flex;flex-direction:column;z-index:5}.brand{display:flex;gap:12px;align-items:center;padding:4px 8px 25px;border-bottom:1px solid #ffffff20}.brandmark{width:42px;height:42px;border-radius:13px;background:#fff;color:var(--green);display:grid;place-items:center;font-size:22px;font-weight:800}.brand strong{font-size:13px}.brand small{display:block;color:#b8cad9;font-size:9px;letter-spacing:.13em;margin-top:3px}.navlabel{color:#91a9bd;font-size:10px;text-transform:uppercase;letter-spacing:.17em;margin:25px 10px 10px}.nav{display:grid;gap:5px}.nav button{border:0;background:transparent;color:#d8e4ed;text-align:left;padding:11px 12px;border-radius:10px;font-size:13px}.nav button:hover,.nav button.active{background:white;color:var(--navy);font-weight:700}.sidefoot{margin-top:auto;border-top:1px solid #ffffff20;padding:16px 8px;color:#b8cad9;font-size:11px}.main{margin-left:258px;min-height:100vh}.topbar{height:72px;background:#ffffffed;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 32px;position:sticky;top:0;z-index:3}.crumb{font-size:11px;color:var(--muted)}.top-title{font-weight:750;color:var(--navy);font-size:16px}.avatar{height:36px;width:36px;border-radius:50%;background:#e8f0f5;color:var(--navy);display:grid;place-items:center;font-weight:800}.content{max-width:1450px;margin:auto;padding:30px 32px 45px}.welcome{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:25px}.eyebrow{color:var(--green);font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.welcome h1{margin:6px 0;color:var(--navy);font-size:28px}.welcome p{margin:0;color:var(--muted)}.btn{border:0;border-radius:10px;padding:11px 15px;background:var(--green);color:white;font-weight:700;font-size:12px}.btn.secondary{background:#edf2f6;color:var(--navy)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-bottom:20px}.card,.panel{background:white;border:1px solid var(--line);border-radius:15px;box-shadow:0 3px 14px #102b4607}.stat{padding:19px}.stathead{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}.staticon{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:#edf4f7;color:var(--green)}.statvalue{font-size:29px;font-weight:800;color:var(--navy);margin:13px 0 2px}.statnote{font-size:10px;color:#98a5b2}.columns{display:grid;grid-template-columns:1.4fr 1fr;gap:16px}.panel{padding:21px;margin-bottom:16px}.panel h2{font-size:14px;color:var(--navy);margin:0 0 4px}.sub{font-size:11px;color:var(--muted);margin:0 0 18px}.empty{padding:35px 10px;text-align:center;color:var(--muted);font-size:12px}.empty b{display:block;color:#526579;margin-bottom:4px}.checkrow{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #f0f3f6;font-size:12px}.checkrow span:last-child{margin-left:auto;color:#9aa6b2;font-size:10px}.notice{padding:14px 16px;border-radius:12px;background:#fff8e9;border:1px solid #f2dfb8;color:#805b1d;font-size:11px;margin-top:5px}.page{display:none}.page.active{display:block}.toolbar{display:flex;gap:10px;justify-content:space-between;align-items:center;margin-bottom:15px}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:570px}th,td{text-align:left;padding:12px 10px;border-bottom:1px solid #edf1f4;font-size:11px}th{color:#8190a0;text-transform:uppercase;font-size:9px}td{color:#425466}.modalback{position:fixed;inset:0;background:#09182780;display:none;align-items:center;justify-content:center;padding:15px;z-index:10}.modalback.open{display:flex}.modal{width:min(520px,100%);background:white;border-radius:16px;padding:22px}.modalhead,.formactions{display:flex;justify-content:space-between;align-items:center;gap:8px}.modalhead h2{margin:0 0 15px;color:var(--navy);font-size:17px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:grid;gap:5px}.field label{font-size:11px;font-weight:700}.field input,.field select{width:100%;border:1px solid #dce4ea;border-radius:8px;padding:10px;background:white;font-size:12px}.formactions{justify-content:flex-end;margin-top:17px}.mobilemenu{display:none;border:0;background:transparent;font-size:22px;color:var(--navy)}footer{border-top:1px solid var(--line);margin-top:25px;padding-top:17px;color:#98a5b2;font-size:10px;display:flex;justify-content:space-between}
-@media(max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}.columns{grid-template-columns:1fr}.sidebar{width:235px;transform:translateX(-100%);transition:.2s}.sidebar.open{transform:translateX(0)}.main{margin-left:0}.mobilemenu{display:block}.topbar{padding:0 17px}.content{padding:23px 17px}.welcome h1{font-size:24px}}
-@media(max-width:520px){.stats{gap:9px}.stat{padding:13px}.statvalue{font-size:23px}.welcome{align-items:start;flex-direction:column}.toolbar{align-items:stretch;flex-direction:column}.formgrid{grid-template-columns:1fr}footer{flex-direction:column}}
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#102b46">
+    <meta name="description" content="FEHB International - Beauty, Agriculture, Education, Technology, and Humanitarian Development in São Tomé and Príncipe.">
+    <title>FEHB International | Hope Through Education & Skills</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { DEFAULT: '#102b46', dark: '#0b2034', light: '#173b5c' },
+                        emerald: { DEFAULT: '#18745d', dark: '#105c49', light: '#22987a' },
+                        mint: '#e8f3ee',
+                        gold: '#e7b95d',
+                        paper: '#f7f9f8',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(-6px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    },
+                    animation: {
+                        fadeIn: 'fadeIn 0.25s ease-out',
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        .glass-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .hero-pattern {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+            background-size: 28px 28px;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            50% { transform: scale(1.15); opacity: 0.4; }
+            100% { transform: scale(0.95); opacity: 0.8; }
+        }
+        .whatsapp-pulse { animation: pulse-ring 2.5s infinite ease-in-out; }
+        section[id] { scroll-margin-top: 5rem; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f3; }
+        ::-webkit-scrollbar-thumb { background: #18745d; border-radius: 4px; }
+    </style>
 </head>
-<body>
-<aside class="sidebar" id="sidebar"><div class="brand"><div class="brandmark">F</div><div><strong>FEHB INTERNATIONAL</strong><small>GIVING HOPE • BUILDING DIGNITY</small></div></div><div class="navlabel">Workspace</div><nav class="nav">
-<button class="active" data-page="Overview">◫ Overview</button><button data-page="Beneficiaries">♙ Beneficiaries</button><button data-page="Education & Skills">▤ Education & Skills</button><button data-page="Projects">▣ Projects</button><button data-page="Finance">◈ Finance</button><button data-page="Staff & Volunteers">♧ Staff & Volunteers</button><button data-page="Child Protection">⛨ Child Protection</button><button data-page="Reports">▥ Reports</button><button data-page="Settings">⚙ Settings</button></nav><div class="sidefoot">FEHB International<br>Management workspace · Prototype</div></aside>
-<main class="main"><header class="topbar"><div style="display:flex;align-items:center;gap:12px"><button class="mobilemenu" id="menu">☰</button><div><div class="crumb">FEHB International / <span id="crumb">Overview</span></div><div class="top-title">Management Portal</div></div></div><div style="display:flex;align-items:center;gap:12px"><span style="font-size:11px;color:#718096">Prototype</span><div class="avatar">FE</div></div></header>
-<div class="content"><div class="welcome"><div><div class="eyebrow">Foundation workspace</div><h1 id="heading">Overview</h1><p id="description">A clear view of your foundation's activities and impact.</p></div><button class="btn" id="primaryAction">＋ Add beneficiary</button></div>
-<section class="page active" id="page-Overview"><div class="stats"><div class="card stat"><div class="stathead">Beneficiaries supported <span class="staticon">♙</span></div><div class="statvalue" id="beneficiaryCount">0</div><div class="statnote">Demo records in this browser</div></div><div class="card stat"><div class="stathead">Active programmes <span class="staticon">▣</span></div><div class="statvalue" id="projectCount">0</div><div class="statnote">Programmes created</div></div><div class="card stat"><div class="stathead">Team members <span class="staticon">♧</span></div><div class="statvalue" id="staffCount">0</div><div class="statnote">Staff and volunteers</div></div><div class="card stat"><div class="stathead">Funds recorded <span class="staticon">◈</span></div><div class="statvalue" id="fundsCount">0 XAF</div><div class="statnote">Demo ledger total</div></div></div><div class="columns"><div class="panel"><h2>Programme activity</h2><p class="sub">Latest projects and programme updates</p><div class="empty" id="activityEmpty"><b>No programme activity yet</b>Create a programme to track FEHB's work.</div><div id="activityList"></div></div><div class="panel"><h2>Getting started</h2><p class="sub">Recommended organisation setup</p><div class="checkrow">Review organisation profile <span>Pending</span></div><div class="checkrow">Add authorised team members <span>Pending</span></div><div class="checkrow">Create your first programme <span>Pending</span></div><div class="checkrow">Set up beneficiary registration <span>Pending</span></div><div class="checkrow">Approve safeguarding procedures <span>Important</span></div></div></div><div class="notice"><b>Safeguarding & privacy:</b> This is a frontend prototype. Do not enter real children's personal information. Secure authentication, role permissions, protected database storage, consent workflows and audit logging are required before live use.</div></section>
-<section class="page" id="page-Beneficiaries"><div class="panel"><div class="toolbar"><div><h2>Beneficiary register</h2><p class="sub">Demo records stored only in this browser</p></div><button class="btn" onclick="openModal('beneficiary')">＋ Register beneficiary</button></div><div class="tablewrap"><table><thead><tr><th>Reference</th><th>Display name</th><th>Age group</th><th>Support area</th></tr></thead><tbody id="beneficiaryRows"></tbody></table></div><div class="empty" id="beneficiaryEmpty">No demo records yet.</div></div></section>
-<section class="page" id="page-Projects"><div class="panel"><div class="toolbar"><div><h2>Projects & programmes</h2><p class="sub">Education, inclusion and livelihood programmes</p></div><button class="btn" onclick="openModal('project')">＋ New programme</button></div><div class="tablewrap"><table><thead><tr><th>Programme</th><th>Focus area</th><th>Start date</th></tr></thead><tbody id="projectRows"></tbody></table></div><div class="empty" id="projectEmpty">No programmes created yet.</div></div></section>
-<section class="page" id="page-Finance"><div class="panel"><div class="toolbar"><div><h2>Finance ledger</h2><p class="sub">Demo donations and approved expenditure</p></div><button class="btn" onclick="openModal('finance')">＋ Record transaction</button></div><div class="tablewrap"><table><thead><tr><th>Date</th><th>Description</th><th>Type</th><th>Amount (XAF)</th></tr></thead><tbody id="financeRows"></tbody></table></div><div class="empty" id="financeEmpty">No demo transactions yet.</div></div><div class="notice">Transactions require supporting documents and approval under the Foundation's financial policy.</div></section>
-<section class="page" id="page-Staff & Volunteers"><div class="panel"><div class="toolbar"><div><h2>Staff & volunteers</h2><p class="sub">Team directory prototype</p></div><button class="btn" onclick="openModal('staff')">＋ Add team member</button></div><div class="tablewrap"><table><thead><tr><th>Name</th><th>Role</th><th>Type</th></tr></thead><tbody id="staffRows"></tbody></table></div><div class="empty" id="staffEmpty">No team members added.</div></div></section>
-<section class="page" id="page-Education & Skills"><div class="panel"><h2>Education & vocational skills</h2><p class="sub">Support areas from the FEHB constitution</p><div class="checkrow">School fees, books, uniforms and transport <span>Planned</span></div><div class="checkrow">Adult literacy and second-chance education <span>Planned</span></div><div class="checkrow">Apprenticeship, tools and mentorship <span>Planned</span></div><div class="checkrow">Welding, carpentry, tailoring and mechanics <span>Planned</span></div><div class="checkrow">ICT, catering, farming, music and arts <span>Planned</span></div></div></section>
-<section class="page" id="page-Child Protection"><div class="panel"><h2>Child protection & safeguarding</h2><p class="sub">Safeguarding obligations in the supplied constitution</p><div class="notice">No member, staff member or volunteer may beat, abuse, exploit or molest a child. Suspected abuse must be reported promptly to the appropriate protection authorities.</div><div class="checkrow">Signed child protection code register <span>To configure</span></div><div class="checkrow">Parent / guardian photo consent records <span>To configure</span></div><div class="checkrow">Incident reporting and referral procedure <span>To configure</span></div><div class="checkrow">Staff and volunteer safeguarding checks <span>To configure</span></div><p class="sub" style="margin-top:16px">A confidential, restricted reporting workflow is required. Do not enter incident details here.</p></div></section>
-<section class="page" id="page-Reports"><div class="panel"><h2>Reports & monitoring</h2><p class="sub">Summary of demo records in this browser</p><div class="checkrow">Beneficiary records <span id="reportBeneficiaries">0</span></div><div class="checkrow">Programmes created <span id="reportProjects">0</span></div><div class="checkrow">Team members <span id="reportStaff">0</span></div><div class="checkrow">Finance transactions <span id="reportFinance">0</span></div><button class="btn secondary" onclick="window.print()">Print summary</button></div></section>
-<section class="page" id="page-Settings"><div class="panel"><h2>Organisation profile</h2><p class="sub">Initial details from the supplied constitution</p><div class="checkrow">Organisation <span>FEHB International</span></div><div class="checkrow">Head office <span>São Tomé and Príncipe</span></div><div class="checkrow">Working languages <span>English · French · Portuguese</span></div><div class="checkrow">Organisation type <span>Non-profit · Non-political · NGO</span></div><div class="checkrow">Founder / proposed Director General <span>Yisa Promise Nsom</span></div><div class="checkrow">Motto <span>Giving hope through education and trade</span></div></div></section>
-<footer><span>© <span id="year"></span> FEHB International. All rights reserved.</span><span>Giving hope through education, skills and inclusion.</span></footer></div></main>
-<div class="modalback" id="modalback"><div class="modal"><div class="modalhead"><h2 id="modalTitle">Add record</h2><button class="btn secondary" onclick="closeModal()">Close</button></div><form id="recordForm"><div id="formFields" class="formgrid"></div><div class="formactions"><button type="button" class="btn secondary" onclick="closeModal()">Cancel</button><button class="btn" type="submit">Save demo record</button></div></form></div></div>
-<script>
-const descriptions={"Overview":"A clear view of your foundation's activities and impact.","Beneficiaries":"Register and support children and adults receiving assistance.","Education & Skills":"Track school support, scholarships and vocational training.","Projects":"Plan programmes, monitor activities and measure outcomes.","Finance":"Record donations, grants, budgets and approved expenditure.","Staff & Volunteers":"Coordinate your team, volunteers and assigned activities.","Child Protection":"Safeguarding policies, reports and consent records.","Reports":"Review organisation activity and programme summaries.","Settings":"Organisation details and system configuration."};
-let data={beneficiaries:[],projects:[],finance:[],staff:[]};try{data={...data,...JSON.parse(localStorage.getItem("fehb-demo-data")||"{}")}}catch(e){}const $=id=>document.getElementById(id);
-function save(){localStorage.setItem("fehb-demo-data",JSON.stringify(data));render()}
-function go(page){document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));$("page-"+page).classList.add("active");document.querySelectorAll(".nav button").forEach(x=>x.classList.toggle("active",x.dataset.page===page));$("heading").textContent=page;$("crumb").textContent=page;$("description").textContent=descriptions[page];$("primaryAction").style.display=page==="Overview"?"inline-block":"none";$("sidebar").classList.remove("open")}
-document.querySelectorAll(".nav button").forEach(b=>b.addEventListener("click",()=>go(b.dataset.page)));$("menu").onclick=()=>$("sidebar").classList.toggle("open");$("primaryAction").onclick=()=>openModal("beneficiary");$("year").textContent=new Date().getFullYear();
-const configs={beneficiary:{title:"Register beneficiary (demo)",fields:[["name","Display name","text"],["age","Age","number"],["group","Age group","select:Child (0–17)|Adult (18+)"],["support","Support area","select:School support|Disability inclusion|Vocational training|Adult literacy|Family support"]]},project:{title:"Create programme",fields:[["name","Programme name","text"],["focus","Focus area","select:Education|Vocational skills|Disability inclusion|Child protection|Community support"],["date","Start date","date"]]},finance:{title:"Record transaction (demo)",fields:[["description","Description","text"],["type","Transaction type","select:Donation|Grant|Expenditure"],["amount","Amount (XAF)","number"],["date","Date","date"]]},staff:{title:"Add team member (demo)",fields:[["name","Name","text"],["role","Role","text"],["type","Type","select:Staff|Volunteer|Adviser"]]}};
-function openModal(type){const c=configs[type];$("modalTitle").textContent=c.title;$("formFields").innerHTML=c.fields.map(([id,label,type])=>{const input=type.startsWith("select:")?'<select name="'+id+'" required>'+type.slice(7).split("|").map(x=>'<option>'+x+'</option>').join("")+'</select>':'<input name="'+id+'" type="'+type+'" '+(type==="number"?'min="0" step="1"':'')+' required>';return '<div class="field"><label>'+label+'</label>'+input+'</div>'}).join("");$("modalback").classList.add("open");$("recordForm").dataset.type=arguments[0]}
-function closeModal(){$("modalback").classList.remove("open")}
-$("recordForm").addEventListener("submit",e=>{e.preventDefault();const type=e.target.dataset.type,v=Object.fromEntries(new FormData(e.target));if(type==="beneficiary")data.beneficiaries.push({...v,ref:"FEHB-"+String(data.beneficiaries.length+1).padStart(4,"0")});if(type==="project")data.projects.push(v);if(type==="finance")data.finance.push(v);if(type==="staff")data.staff.push(v);e.target.reset();closeModal();save()});
-function rows(id,items,keys,empty){$(id).innerHTML=items.map(item=>"<tr>"+keys.map(k=>"<td>"+String(item[k]??"—").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))+"</td>").join("")+"</tr>").join("");$(empty).style.display=items.length?"none":"block"}
-function render(){ $("beneficiaryCount").textContent=data.beneficiaries.length;$("projectCount").textContent=data.projects.length;$("staffCount").textContent=data.staff.length;const funds=data.finance.reduce((s,x)=>s+(x.type==="Expenditure"?-1:1)*(Number(x.amount)||0),0);$("fundsCount").textContent=funds.toLocaleString()+" XAF";rows("beneficiaryRows",data.beneficiaries,["ref","name","group","support"],"beneficiaryEmpty");rows("projectRows",data.projects,["name","focus","date"],"projectEmpty");rows("staffRows",data.staff,["name","role","type"],"staffEmpty");rows("financeRows",data.finance,["date","description","type","amount"],"financeEmpty");$("reportBeneficiaries").textContent=data.beneficiaries.length;$("reportProjects").textContent=data.projects.length;$("reportStaff").textContent=data.staff.length;$("reportFinance").textContent=data.finance.length;$("activityEmpty").style.display=data.projects.length?"none":"block";$("activityList").innerHTML=data.projects.slice(-5).reverse().map(p=>'<div class="checkrow">'+p.name+'<span>'+p.focus+'</span></div>').join("")}
-render();
-</script></body></html>
+<body class="bg-white text-gray-800 font-sans antialiased selection:bg-emerald-100 selection:text-emerald-900">
+
+    <!-- Top Announcement Bar -->
+    <aside aria-label="Announcement" class="bg-navy text-sky-100 text-xs py-2 border-b border-navy-light/45">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span data-i18n="topLocation">São Tomé and Príncipe · International Non-Profit Foundation</span>
+            </div>
+            <div class="hidden md:flex items-center gap-4 text-sky-200/80 font-medium">
+                <span data-i18n="topMission">Beauty · Agriculture · Education · Technology · Humanitarian</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 glass-header border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#home" class="flex items-center gap-3 group">
+                <div class="h-12 w-12 rounded-2xl bg-gradient-to-br from-emerald to-navy text-white flex items-center justify-center shadow-lg shadow-emerald/20 group-hover:scale-105 transition-transform overflow-hidden p-1">
+                    <svg viewBox="0 0 100 100" class="w-full h-full text-white" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="50" cy="50" r="48" fill="#102b46" stroke="#18745d" stroke-width="3"/>
+                        <path d="M50 35C53.3137 35 56 32.3137 56 29C56 25.6863 53.3137 23 50 23C46.6863 23 44 25.6863 44 29C44 32.3137 46.6863 35 50 35Z" fill="#e7b95d"/>
+                        <path d="M50 40C43.3726 40 38 45.3726 38 52H62C62 45.3726 56.6274 40 50 40Z" fill="#e8f3ee"/>
+                        <path d="M25 65C30 50 45 45 50 45C55 45 70 50 75 65C75 75 60 85 50 85C40 85 25 75 25 65Z" fill="#18745d" opacity="0.8"/>
+                        <path d="M50 55L32 63L50 71L68 63L50 55Z" fill="#e7b95d"/>
+                        <path d="M60 67.5V76C60 79 55 81 50 81C45 81 40 79 40 76V67.5" stroke="#e7b95d" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-sm font-extrabold tracking-wider text-navy block leading-tight">FEHB INTERNATIONAL</span>
+                    <small class="text-[9px] tracking-[0.15em] font-bold text-emerald block mt-0.5" data-i18n="brandSub">HOPE · SKILLS · OPPORTUNITIES</small>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden xl:flex items-center gap-5 text-xs font-bold text-gray-600" aria-label="Main">
+                <a href="#home" class="hover:text-emerald transition-colors" data-i18n="navHome">Home</a>
+                <a href="#about" class="hover:text-emerald transition-colors" data-i18n="navAbout">About us</a>
+                <a href="#pillars" class="hover:text-emerald transition-colors" data-i18n="navPillars">5 Pillars</a>
+                <a href="#programmes" class="hover:text-emerald transition-colors" data-i18n="navPrograms">Programmes</a>
+                <a href="#impact" class="hover:text-emerald transition-colors" data-i18n="navImpact">Our impact</a>
+                <a href="#gallery" class="hover:text-emerald transition-colors" data-i18n="navGallery">Gallery</a>
+                <a href="#team" class="hover:text-emerald transition-colors" data-i18n="navTeam">Our team</a>
+                <a href="#involved" class="hover:text-emerald transition-colors" data-i18n="navInvolved">Get involved</a>
+                <a href="#contact" class="hover:text-emerald transition-colors" data-i18n="navContact">Contact</a>
+            </nav>
+
+            <div class="hidden sm:flex items-center gap-3">
+                <div class="relative">
+                    <select id="languageSelector" aria-label="Select Language" class="appearance-none bg-gray-50 border border-gray-200 text-navy font-bold text-xs rounded-xl py-2 pl-3 pr-8 focus:outline-none focus:border-emerald cursor-pointer shadow-sm">
+                        <option value="en">EN</option>
+                        <option value="fr">FR</option>
+                        <option value="pt">PT</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">
+                        <svg class="h-3 w-3 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                    </div>
+                </div>
+                <a href="#donate" class="bg-emerald hover:bg-emerald-dark text-white font-extrabold text-xs px-5 py-3 rounded-full transition-all shadow-md shadow-emerald/20 hover:-translate-y-0.5" data-i18n="navSupport">Support FEHB</a>
+            </div>
+
+            <button id="mobileToggle" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobileMenu" class="xl:hidden p-2.5 rounded-xl bg-gray-100 text-navy hover:bg-gray-200 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="xl:hidden hidden bg-white border-b border-gray-200 px-6 pt-4 pb-6 shadow-2xl animate-fadeIn">
+            <div class="flex flex-col gap-4 text-sm font-bold text-gray-700">
+                <div class="flex items-center justify-between py-2 border-b border-gray-100">
+                    <span class="text-xs text-gray-400 font-semibold" data-i18n="mobileLangLabel">Select Language</span>
+                    <select id="mobileLanguageSelector" aria-label="Select Language Mobile" class="bg-gray-100 border border-gray-200 text-navy font-bold text-xs rounded-lg py-1.5 px-3 focus:outline-none focus:border-emerald">
+                        <option value="en">English (EN)</option>
+                        <option value="fr">Français (FR)</option>
+                        <option value="pt">Português (PT)</option>
+                    </select>
+                </div>
+                <a href="#home" class="mobile-nav-link hover:text-emerald py-1" data-i18n="navHome">Home</a>
+                <a href="#about" class="mobile-nav-link hover:text-emerald py-1" data-i18n="navAbout">About us</a>
+                <a href="#pillars" class="mobile-nav-link hover:text-emerald py-1" data-i18n="navPillars">5 Pillars</a>
+                <a href="#programmes" class="mobile-nav-link hover:text-emerald py-1" data-i18n="navPrograms">Programmes</a>
+                <a href="#impact" class="mobile-nav-link hover:text-emerald py-1" data-i18n="navImpact">Our impact</a>
+                <a href="#gallery" class="mobile-nav-link hover:text-emerald py-1" data-i18n="navGallery">Gallery</a>
+                <a href="#team" class="mobile-nav-link hover:text-emerald py-1" data-i18n="navTeam">Our team</a>
+                <a href="#involved" class="mobile-nav-link hover:text-emerald py-1" data-i18n="navInvolved">Get involved</a>
+                <a href="#contact" class="mobile-nav-link hover:text-emerald py-1" data-i18n="navContact">Contact</a>
+                <a href="#donate" class="mobile-nav-link mt-2 text-center bg-emerald text-white py-3 rounded-full shadow-md" data-i18n="navSupport">Support FEHB</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section id="home" class="relative bg-navy text-white overflow-hidden hero-pattern">
+            <div class="absolute -top-32 -right-32 w-[550px] h-[550px] rounded-full border border-white/10 bg-white/[0.02] blur-2xl pointer-events-none"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 rounded-full bg-emerald/10 blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                    <div class="lg:col-span-6 space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald/20 border border-emerald/30 text-emerald-300 text-xs font-black tracking-widest uppercase">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                            <span data-i18n="heroEyebrow">Building Skills. Creating Opportunities. Helping Communities.</span>
+                        </div>
+
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1]" data-i18n="heroTitle">
+                            Every person deserves a chance to <span class="text-gold font-extrabold">learn, grow and thrive.</span>
+                        </h1>
+
+                        <p class="text-sky-100/90 text-base sm:text-lg max-w-2xl leading-relaxed font-normal" data-i18n="heroText">
+                            FEHB International empowers vulnerable children and adults through Beauty, Agriculture, Education, Technology, and Humanitarian Development in São Tomé and Príncipe.
+                        </p>
+
+                        <div class="flex flex-wrap items-center gap-4 pt-2">
+                            <a href="#pillars" class="bg-emerald hover:bg-emerald-dark text-white font-extrabold text-sm px-8 py-4 rounded-full transition-all shadow-lg shadow-emerald/30 hover:-translate-y-0.5 flex items-center gap-2">
+                                <span data-i18n="heroPrimary">Explore our pillars</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </a>
+                            <a href="#donate" class="bg-gold hover:brightness-95 text-navy font-extrabold text-sm px-8 py-4 rounded-full transition-all shadow-lg hover:-translate-y-0.5" data-i18n="heroDonate">Donate</a>
+                            <a href="#contact" class="bg-white/10 hover:bg-white/15 border border-white/20 text-white font-extrabold text-sm px-8 py-4 rounded-full transition-all backdrop-blur-sm" data-i18n="heroSecondary">Contact via WhatsApp</a>
+                        </div>
+
+                        <div class="flex flex-wrap items-center gap-2 pt-4 text-[11px] text-sky-200/90 font-bold">
+                            <span class="bg-white/10 px-3 py-1 rounded-full border border-white/15" data-i18n="tagBeauty">Beauty</span>
+                            <span class="bg-white/10 px-3 py-1 rounded-full border border-white/15" data-i18n="tagAgri">Agriculture</span>
+                            <span class="bg-white/10 px-3 py-1 rounded-full border border-white/15" data-i18n="tagEdu">Education</span>
+                            <span class="bg-white/10 px-3 py-1 rounded-full border border-white/15" data-i18n="tagTech">Technology</span>
+                            <span class="bg-white/10 px-3 py-1 rounded-full border border-white/15" data-i18n="tagHum">Humanitarian</span>
+                        </div>
+                    </div>
+
+                    <!-- Hero Slider -->
+                    <div class="lg:col-span-6 relative">
+                        <div id="heroSliderContainer" class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 aspect-[4/3] bg-navy-light group">
+
+                            <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-700 ease-in-out">
+                                <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=85" alt="Education and learning" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+                                <div class="absolute bottom-6 left-6 right-6 text-white">
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-emerald-300 bg-emerald/30 px-3 py-1 rounded-full backdrop-blur-sm" data-i18n="slide1Tag">Education</span>
+                                    <h3 class="text-lg sm:text-xl font-black mt-2" data-i18n="slide1Title">Empowering through quality schooling and literacy</h3>
+                                </div>
+                            </div>
+
+                            <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
+                                <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=85" alt="Agriculture and farming" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+                                <div class="absolute bottom-6 left-6 right-6 text-white">
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-gold bg-gold/30 px-3 py-1 rounded-full backdrop-blur-sm" data-i18n="slide2Tag">Agriculture</span>
+                                    <h3 class="text-lg sm:text-xl font-black mt-2" data-i18n="slide2Title">Sustainable farming, skills and food security</h3>
+                                </div>
+                            </div>
+
+                            <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
+                                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=85" alt="Technology and digital skills" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+                                <div class="absolute bottom-6 left-6 right-6 text-white">
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-sky-300 bg-sky-500/30 px-3 py-1 rounded-full backdrop-blur-sm" data-i18n="slide3Tag">Technology</span>
+                                    <h3 class="text-lg sm:text-xl font-black mt-2" data-i18n="slide3Title">Digital literacy and modern vocational tools</h3>
+                                </div>
+                            </div>
+
+                            <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
+                                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=85" alt="Beauty and community development" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent"></div>
+                                <div class="absolute bottom-6 left-6 right-6 text-white">
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-emerald-300 bg-emerald/30 px-3 py-1 rounded-full backdrop-blur-sm" data-i18n="slide4Tag">Beauty & Humanitarian</span>
+                                    <h3 class="text-lg sm:text-xl font-black mt-2" data-i18n="slide4Title">Building confidence, dignity and inclusive communities</h3>
+                                </div>
+                            </div>
+
+                            <button id="prevSlide" aria-label="Previous slide" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center backdrop-blur-md transition-colors opacity-0 group-hover:opacity-100 focus:opacity-100">❮</button>
+                            <button id="nextSlide" aria-label="Next slide" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center backdrop-blur-md transition-colors opacity-0 group-hover:opacity-100 focus:opacity-100">❯</button>
+
+                            <div class="absolute bottom-3 right-6 flex items-center gap-1.5 z-20">
+                                <button onclick="currentSlide(0)" class="slide-dot w-6 h-2 rounded-full bg-white transition-all" aria-label="Slide 1"></button>
+                                <button onclick="currentSlide(1)" class="slide-dot w-2 h-2 rounded-full bg-white/50 transition-all" aria-label="Slide 2"></button>
+                                <button onclick="currentSlide(2)" class="slide-dot w-2 h-2 rounded-full bg-white/50 transition-all" aria-label="Slide 3"></button>
+                                <button onclick="currentSlide(3)" class="slide-dot w-2 h-2 rounded-full bg-white/50 transition-all" aria-label="Slide 4"></button>
+                            </div>
+                        </div>
+
+                        <div class="absolute -bottom-6 -left-6 sm:left-4 bg-white text-navy p-5 rounded-2xl shadow-2xl border border-gray-100 flex items-center gap-4 max-w-[240px] z-20">
+                            <div class="w-12 h-12 rounded-xl bg-mint text-emerald flex items-center justify-center text-xl font-black">✨</div>
+                            <div>
+                                <div class="text-xl font-black leading-none text-navy" data-i18n="floatOneTitle">SKILLS</div>
+                                <div class="text-xs text-gray-500 font-medium mt-1" data-i18n="floatOne">Creating opportunities</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Bar -->
+        <div class="bg-gray-50 border-y border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start gap-4">
+                        <div class="h-10 w-10 rounded-xl bg-emerald/10 text-emerald flex items-center justify-center font-bold text-lg shrink-0">♡</div>
+                        <span class="text-xs sm:text-sm font-extrabold text-navy" data-i18n="trust1">Dignity for every person without exception</span>
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start gap-4">
+                        <div class="h-10 w-10 rounded-xl bg-emerald/10 text-emerald flex items-center justify-center font-bold text-lg shrink-0">✧</div>
+                        <span class="text-xs sm:text-sm font-extrabold text-navy" data-i18n="trust2">Practical skill building for all ages</span>
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start gap-4">
+                        <div class="h-10 w-10 rounded-xl bg-emerald/10 text-emerald flex items-center justify-center font-bold text-lg shrink-0">◎</div>
+                        <span class="text-xs sm:text-sm font-extrabold text-navy" data-i18n="trust3">Empowering communities across São Tomé</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About -->
+        <section id="about" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+                    <div class="lg:col-span-6 relative">
+                        <div class="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/3] flex items-center justify-center p-8 bg-paper border border-gray-200">
+                            <div class="text-center space-y-4">
+                                <div class="w-32 h-32 mx-auto rounded-3xl bg-gradient-to-br from-emerald to-navy p-2 shadow-2xl">
+                                    <svg viewBox="0 0 100 100" class="w-full h-full text-white" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <circle cx="50" cy="50" r="48" fill="#102b46" stroke="#18745d" stroke-width="3"/>
+                                        <path d="M50 35C53.3137 35 56 32.3137 56 29C56 25.6863 53.3137 23 50 23C46.6863 23 44 25.6863 44 29C44 32.3137 46.6863 35 50 35Z" fill="#e7b95d"/>
+                                        <path d="M50 40C43.3726 40 38 45.3726 38 52H62C62 45.3726 56.6274 40 50 40Z" fill="#e8f3ee"/>
+                                        <path d="M25 65C30 50 45 45 50 45C55 45 70 50 75 65C75 75 60 85 50 85C40 85 25 75 25 65Z" fill="#18745d" opacity="0.8"/>
+                                        <path d="M50 55L32 63L50 71L68 63L50 55Z" fill="#e7b95d"/>
+                                        <path d="M60 67.5V76C60 79 55 81 50 81C45 81 40 79 40 76V67.5" stroke="#e7b95d" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <h4 class="text-navy font-black text-lg tracking-wider">FEHB INTERNATIONAL</h4>
+                                <p class="text-xs text-gray-500 font-semibold uppercase tracking-widest" data-i18n="heroEyebrow">Building Skills. Creating Opportunities. Helping Communities.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6 space-y-6">
+                        <div>
+                            <span class="text-emerald text-xs font-black tracking-[0.2em] uppercase" data-i18n="aboutKicker">Who we are</span>
+                            <h2 class="text-3xl sm:text-4xl font-black text-navy tracking-tight mt-2" data-i18n="aboutTitle">A foundation built on dignity, opportunity and hope.</h2>
+                        </div>
+
+                        <p class="text-gray-600 text-sm sm:text-base leading-relaxed" data-i18n="aboutP1">
+                            FEHB International is a non-profit, non-political, non-religious and non-governmental foundation based in São Tomé and Príncipe.
+                        </p>
+
+                        <p class="text-gray-600 text-sm sm:text-base leading-relaxed" data-i18n="aboutP2">
+                            We champion 5 core pillars: <strong>Beauty, Agriculture, Education, Technology, and Humanitarian Development</strong> to empower vulnerable children, youth and adults.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-mint/60 border border-emerald/10 font-bold text-xs text-navy">
+                                <span class="h-7 w-7 rounded-lg bg-emerald text-white flex items-center justify-center text-xs shrink-0">✓</span>
+                                <span data-i18n="val1">Love & dignity</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-mint/60 border border-emerald/10 font-bold text-xs text-navy">
+                                <span class="h-7 w-7 rounded-lg bg-emerald text-white flex items-center justify-center text-xs shrink-0">✓</span>
+                                <span data-i18n="val2">Inclusion & unity</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-mint/60 border border-emerald/10 font-bold text-xs text-navy">
+                                <span class="h-7 w-7 rounded-lg bg-emerald text-white flex items-center justify-center text-xs shrink-0">✓</span>
+                                <span data-i18n="val3">Honesty & discipline</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-mint/60 border border-emerald/10 font-bold text-xs text-navy">
+                                <span class="h-7 w-7 rounded-lg bg-emerald text-white flex items-center justify-center text-xs shrink-0">✓</span>
+                                <span data-i18n="val4">Hard work & service</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-2">
+                            <a href="#contact" class="inline-flex items-center gap-2 text-emerald font-extrabold text-xs hover:text-emerald-dark transition-colors group">
+                                <span data-i18n="aboutLink">Connect with our team</span>
+                                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 5 Pillars -->
+        <section id="pillars" class="py-24 bg-paper">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-2xl mb-16">
+                    <span class="text-emerald text-xs font-black tracking-[0.2em] uppercase" data-i18n="pillarsKicker">Our Core Areas</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-navy tracking-tight mt-2" data-i18n="pillarsTitle">The 5 Pillars of FEHB International</h2>
+                    <p class="text-gray-600 text-sm sm:text-base mt-3" data-i18n="pillarsIntro">Our comprehensive approach covers beauty, agriculture, education, technology, and humanitarian development.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-3xl p-8 border border-gray-200/80 shadow-sm hover:shadow-xl transition-all">
+                        <div class="w-12 h-12 rounded-2xl bg-mint text-emerald flex items-center justify-center text-xl font-black mb-6">🌸</div>
+                        <h3 class="text-xl font-extrabold text-navy mb-3" data-i18n="pillar1Title">Beauty & Confidence</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed" data-i18n="pillar1Desc">Professional grooming, cosmetics and vocational beauty training empowering individuals with self-esteem and independent trade skills.</p>
+                    </div>
+                    <div class="bg-white rounded-3xl p-8 border border-gray-200/80 shadow-sm hover:shadow-xl transition-all">
+                        <div class="w-12 h-12 rounded-2xl bg-mint text-emerald flex items-center justify-center text-xl font-black mb-6">🌱</div>
+                        <h3 class="text-xl font-extrabold text-navy mb-3" data-i18n="pillar2Title">Agriculture & Farming</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed" data-i18n="pillar2Desc">Sustainable agriculture training, farming techniques, and local food security initiatives across São Tomé and Príncipe.</p>
+                    </div>
+                    <div class="bg-white rounded-3xl p-8 border border-gray-200/80 shadow-sm hover:shadow-xl transition-all">
+                        <div class="w-12 h-12 rounded-2xl bg-mint text-emerald flex items-center justify-center text-xl font-black mb-6">📚</div>
+                        <h3 class="text-xl font-extrabold text-navy mb-3" data-i18n="pillar3Title">Education & Literacy</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed" data-i18n="pillar3Desc">School support, books, uniforms, tutoring, and adult literacy programs opening doors to lifelong learning.</p>
+                    </div>
+                    <div class="bg-white rounded-3xl p-8 border border-gray-200/80 shadow-sm hover:shadow-xl transition-all">
+                        <div class="w-12 h-12 rounded-2xl bg-mint text-emerald flex items-center justify-center text-xl font-black mb-6">💻</div>
+                        <h3 class="text-xl font-extrabold text-navy mb-3" data-i18n="pillar4Title">Technology & Digital Skills</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed" data-i18n="pillar4Desc">Computer literacy, digital workshops, and technical training preparing youth for the modern digital economy.</p>
+                    </div>
+                    <div class="bg-white rounded-3xl p-8 border border-gray-200/80 shadow-sm hover:shadow-xl transition-all lg:col-span-2">
+                        <div class="w-12 h-12 rounded-2xl bg-mint text-emerald flex items-center justify-center text-xl font-black mb-6">🤝</div>
+                        <h3 class="text-xl font-extrabold text-navy mb-3" data-i18n="pillar5Title">Humanitarian Development</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed" data-i18n="pillar5Desc">Comprehensive community care, disability inclusion, family support, and safeguarding vulnerable populations with unconditional compassion.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programmes -->
+        <section id="programmes" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-2xl mb-16">
+                    <span class="text-emerald text-xs font-black tracking-[0.2em] uppercase" data-i18n="programKicker">What we do</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-navy tracking-tight mt-2" data-i18n="programTitle">Practical support. Lasting possibilities.</h2>
+                    <p class="text-gray-600 text-sm sm:text-base mt-3" data-i18n="programIntro">Our work focuses on helping vulnerable people access learning, develop useful vocational skills, and participate fully in society.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-paper rounded-3xl overflow-hidden border border-gray-200/80 shadow-sm hover:shadow-xl transition-all flex flex-col">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Education" loading="lazy" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-lg font-extrabold text-navy mb-2" data-i18n="p1Title">Education for all</h3>
+                            <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-6 flex-grow" data-i18n="p1Text">School support for vulnerable children, fees, books, uniforms, transport and feeding, alongside adult literacy.</p>
+                            <a href="#contact" class="inline-flex items-center gap-1.5 text-emerald font-extrabold text-xs" data-i18n="learnMore">Learn more →</a>
+                        </div>
+                    </div>
+                    <div class="bg-paper rounded-3xl overflow-hidden border border-gray-200/80 shadow-sm hover:shadow-xl transition-all flex flex-col">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80" alt="Vocational training" loading="lazy" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-lg font-extrabold text-navy mb-2" data-i18n="p2Title">Vocational skills & livelihoods</h3>
+                            <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-6 flex-grow" data-i18n="p2Text">Trade training, apprenticeships, starter tools and mentorship to help youth build sustainable livelihoods.</p>
+                            <a href="#contact" class="inline-flex items-center gap-1.5 text-emerald font-extrabold text-xs" data-i18n="learnMore">Learn more →</a>
+                        </div>
+                    </div>
+                    <div class="bg-paper rounded-3xl overflow-hidden border border-gray-200/80 shadow-sm hover:shadow-xl transition-all flex flex-col">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Community inclusion" loading="lazy" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-lg font-extrabold text-navy mb-2" data-i18n="p3Title">Disability inclusion & care</h3>
+                            <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-6 flex-grow" data-i18n="p3Text">Promoting access, dignity and participation for persons with disabilities and supporting vulnerable families.</p>
+                            <a href="#contact" class="inline-flex items-center gap-1.5 text-emerald font-extrabold text-xs" data-i18n="learnMore">Learn more →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact -->
+        <section id="impact" class="py-24 bg-emerald text-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-5 space-y-6">
+                        <span class="text-emerald-200 text-xs font-black tracking-[0.2em] uppercase" data-i18n="impactKicker">Our commitment</span>
+                        <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight" data-i18n="impactTitle">Impact begins with one opportunity.</h2>
+                        <p class="text-emerald-100 text-sm sm:text-base leading-relaxed" data-i18n="impactText">We are building rigorous partnerships across São Tomé and Príncipe that turn compassion into practical support.</p>
+                        <a href="#contact" class="inline-flex items-center gap-2 bg-white text-navy font-extrabold text-xs px-7 py-3.5 rounded-full hover:bg-sky-50 transition-all shadow-lg" data-i18n="impactCta">Partner with FEHB →</a>
+                    </div>
+                    <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-3xl">
+                            <span class="text-3xl font-black text-gold block mb-2">01</span>
+                            <h4 class="text-lg font-bold text-white mb-1" data-i18n="impact1Title">Education Access</h4>
+                            <p class="text-emerald-100 text-xs" data-i18n="impact1">Removing financial barriers for school children.</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-3xl">
+                            <span class="text-3xl font-black text-gold block mb-2">02</span>
+                            <h4 class="text-lg font-bold text-white mb-1" data-i18n="impact2Title">Skills & Training</h4>
+                            <p class="text-emerald-100 text-xs" data-i18n="impact2">Beauty, agriculture and tech vocational training.</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-3xl">
+                            <span class="text-3xl font-black text-gold block mb-2">03</span>
+                            <h4 class="text-lg font-bold text-white mb-1" data-i18n="impact3Title">Inclusive Communities</h4>
+                            <p class="text-emerald-100 text-xs" data-i18n="impact3">Advocating for equal social participation.</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-3xl">
+                            <span class="text-3xl font-black text-gold block mb-2">04</span>
+                            <h4 class="text-lg font-bold text-white mb-1" data-i18n="impact4Title">Humanitarian Care</h4>
+                            <p class="text-emerald-100 text-xs" data-i18n="impact4">Safeguarding vulnerable families with guidance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery (NEW) -->
+        <section id="gallery" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-2xl mb-12">
+                    <span class="text-emerald text-xs font-black tracking-[0.2em] uppercase" data-i18n="galleryKicker">Gallery</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-navy tracking-tight mt-2" data-i18n="galleryTitle">Moments from our work</h2>
+                    <p class="text-gray-600 text-sm sm:text-base mt-3" data-i18n="galleryIntro">A glimpse of learning, training and community life across our five pillars.</p>
+                </div>
+
+                <!--
+                    NOTE: these are stock photos. Replace each data-full / src with your own
+                    photos (e.g. /images/school-01.jpg) as soon as you have them.
+                -->
+                <div id="galleryGrid" class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 auto-rows-[160px] sm:auto-rows-[200px]">
+                    <button type="button" data-gallery-item data-full="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=85" data-cap="g1" class="group relative overflow-hidden rounded-2xl md:col-span-2 md:row-span-2 focus:outline-none focus:ring-4 focus:ring-emerald/40">
+                        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy" onerror="this.closest('[data-gallery-item]').remove()" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-navy/90 to-transparent text-left text-white text-xs font-bold" data-i18n="g1">Learning together in the classroom</span>
+                    </button>
+                    <button type="button" data-gallery-item data-full="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1600&q=85" data-cap="g2" class="group relative overflow-hidden rounded-2xl focus:outline-none focus:ring-4 focus:ring-emerald/40">
+                        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy" onerror="this.closest('[data-gallery-item]').remove()" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-navy/90 to-transparent text-left text-white text-xs font-bold" data-i18n="g2">Fields and food security</span>
+                    </button>
+                    <button type="button" data-gallery-item data-full="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1600&q=85" data-cap="g3" class="group relative overflow-hidden rounded-2xl focus:outline-none focus:ring-4 focus:ring-emerald/40">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy" onerror="this.closest('[data-gallery-item]').remove()" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-navy/90 to-transparent text-left text-white text-xs font-bold" data-i18n="g3">Digital skills workshop</span>
+                    </button>
+                    <button type="button" data-gallery-item data-full="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=85" data-cap="g4" class="group relative overflow-hidden rounded-2xl md:col-span-2 focus:outline-none focus:ring-4 focus:ring-emerald/40">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy" onerror="this.closest('[data-gallery-item]').remove()" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-navy/90 to-transparent text-left text-white text-xs font-bold" data-i18n="g4">Building confidence and community</span>
+                    </button>
+                    <button type="button" data-gallery-item data-full="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=85" data-cap="g5" class="group relative overflow-hidden rounded-2xl focus:outline-none focus:ring-4 focus:ring-emerald/40">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy" onerror="this.closest('[data-gallery-item]').remove()" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-navy/90 to-transparent text-left text-white text-xs font-bold" data-i18n="g5">School support for children</span>
+                    </button>
+                    <button type="button" data-gallery-item data-full="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=85" data-cap="g6" class="group relative overflow-hidden rounded-2xl focus:outline-none focus:ring-4 focus:ring-emerald/40">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy" onerror="this.closest('[data-gallery-item]').remove()" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-navy/90 to-transparent text-left text-white text-xs font-bold" data-i18n="g6">Vocational training</span>
+                    </button>
+                    <button type="button" data-gallery-item data-full="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1600&q=85" data-cap="g7" class="group relative overflow-hidden rounded-2xl focus:outline-none focus:ring-4 focus:ring-emerald/40">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy" onerror="this.closest('[data-gallery-item]').remove()" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-navy/90 to-transparent text-left text-white text-xs font-bold" data-i18n="g7">Inclusion and care</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team (NEW) -->
+        <section id="team" class="py-24 bg-paper">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-2xl mb-16">
+                    <span class="text-emerald text-xs font-black tracking-[0.2em] uppercase" data-i18n="teamKicker">Our team</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-navy tracking-tight mt-2" data-i18n="teamTitle">The people behind each pillar</h2>
+                    <p class="text-gray-600 text-sm sm:text-base mt-3" data-i18n="teamIntro">Dedicated teams and volunteers work together to deliver every programme with dignity and discipline.</p>
+                </div>
+
+                <!--
+                    To show named team members, add cards like this inside the grid below:
+                    <div class="bg-white rounded-3xl p-6 text-center border border-gray-200/80">
+                        <img src="images/person.jpg" alt="Full Name" class="w-24 h-24 rounded-full object-cover mx-auto mb-4">
+                        <h3 class="font-extrabold text-navy">Full Name</h3>
+                        <p class="text-xs text-emerald font-bold">Role</p>
+                    </div>
+                -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-3xl p-7 border border-gray-200/80 shadow-sm hover:shadow-lg transition-all">
+                        <div class="w-12 h-12 rounded-2xl bg-mint text-emerald flex items-center justify-center text-xl mb-4">🌸</div>
+                        <h3 class="text-lg font-extrabold text-navy mb-2" data-i18n="t1Title">Beauty & Confidence team</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed" data-i18n="t1Desc">Trainers and mentors who teach grooming and beauty trades.</p>
+                    </div>
+                    <div class="bg-white rounded-3xl p-7 border border-gray-200/80 shadow-sm hover:shadow-lg transition-all">
+                        <div class="w-12 h-12 rounded-2xl bg-mint text-emerald flex items-center justify-center text-xl mb-4">🌱</div>
+                        <h3 class="text-lg font-extrabold text-navy mb-2" data-i18n="t2Title">Agriculture team</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed" data-i18n="t2Desc">Farmers and field instructors sharing sustainable growing methods.</p>
+                    </div>
+                    <div class="bg-white rounded-3xl p-7 border border-gray-200/80 shadow-sm hover:shadow-lg transition-all">
+                        <div class="w-12 h-12 rounded-2xl bg-mint text-emerald flex items-center justify-center text-xl mb-4">📚</div>
+                        <h3 class="text-lg font-extrabold text-navy mb-2" data-i18n="t3Title">Education team</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed" data-i18n="t3Desc">Teachers and tutors supporting children and adult learners.</p>
+                    </div>
+                    <div class="bg-white rounded-3xl p-7 border border-gray-200/80 shadow-sm hover:shadow-lg transition-all">
+                        <div class="w-12 h-12 rounded-2xl bg-mint text-emerald flex items-center justify-center text-xl mb-4">💻</div>
+                        <h3 class="text-lg font-extrabold text-navy mb-2" data-i18n="t4Title">Technology team</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed" data-i18n="t4Desc">Volunteers who run computer and digital literacy workshops.</p>
+                    </div>
+                    <div class="bg-white rounded-3xl p-7 border border-gray-200/80 shadow-sm hover:shadow-lg transition-all">
+                        <div class="w-12 h-12 rounded-2xl bg-mint text-emerald flex items-center justify-center text-xl mb-4">🤝</div>
+                        <h3 class="text-lg font-extrabold text-navy mb-2" data-i18n="t5Title">Humanitarian team</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed" data-i18n="t5Desc">Community workers supporting families and disability inclusion.</p>
+                    </div>
+                    <div class="bg-navy text-white rounded-3xl p-7 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-extrabold mb-2" data-i18n="joinTitle">Join the team</h3>
+                            <p class="text-sky-100/90 text-xs sm:text-sm leading-relaxed mb-5" data-i18n="joinText">We welcome volunteers with teaching, farming, technical or community skills.</p>
+                        </div>
+                        <a href="https://wa.me/2399860074?text=Hello%20FEHB%20International,%20I%20would%20like%20to%20join%20your%20team." target="_blank" rel="noopener" class="inline-flex items-center justify-center bg-white text-navy font-extrabold text-xs px-6 py-3 rounded-full" data-i18n="joinCta">Join us on WhatsApp →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Get Involved -->
+        <section id="involved" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-2xl mb-16">
+                    <span class="text-emerald text-xs font-black tracking-[0.2em] uppercase" data-i18n="involveKicker">Be part of the change</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-navy tracking-tight mt-2" data-i18n="involveTitle">There is a place for you in this work.</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-navy text-white rounded-3xl p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden shadow-xl">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-emerald/30 text-emerald-300 flex items-center justify-center font-bold text-xl mb-6">🤝</div>
+                            <h3 class="text-2xl font-black mb-3" data-i18n="volTitle">Volunteer your time</h3>
+                            <p class="text-sky-100/90 text-sm leading-relaxed mb-8" data-i18n="volText">Share your professional knowledge, teaching skills, or personal time to support education, agriculture and training workshops.</p>
+                        </div>
+                        <a href="https://wa.me/2399860074?text=Hello%20FEHB%20International,%20I%20would%20like%20to%20volunteer!" target="_blank" rel="noopener" class="inline-flex items-center justify-center bg-white text-navy font-extrabold text-xs px-8 py-4 rounded-full shadow-md" data-i18n="volCta">Chat on WhatsApp to Volunteer →</a>
+                    </div>
+                    <div class="bg-paper text-navy rounded-3xl p-8 sm:p-10 flex flex-col justify-between border border-gray-200/80">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-emerald/10 text-emerald flex items-center justify-center font-bold text-xl mb-6">🏛</div>
+                            <h3 class="text-2xl font-black mb-3 text-navy" data-i18n="partnerTitle">Partner with FEHB</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-8" data-i18n="partnerText">Schools, training centers, corporate donors and community groups can help us expand opportunity and reach.</p>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center justify-center bg-emerald hover:bg-emerald-dark text-white font-extrabold text-xs px-8 py-4 rounded-full shadow-md" data-i18n="partnerCta">Explore partnership →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Donate (NEW) -->
+        <section id="donate" class="py-24 bg-navy text-white relative overflow-hidden hero-pattern">
+            <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-emerald/20 blur-3xl pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-2xl mb-14">
+                    <span class="text-gold text-xs font-black tracking-[0.2em] uppercase" data-i18n="donateKicker">Support our work</span>
+                    <h2 class="text-3xl sm:text-4xl font-black tracking-tight mt-2" data-i18n="donateTitle">Your gift becomes someone's opportunity.</h2>
+                    <p class="text-sky-100/90 text-sm sm:text-base mt-3" data-i18n="donateIntro">Choose the area you care about most. Every contribution supports practical learning, skills and care.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald/30 flex items-center justify-center text-xl mb-5">📚</div>
+                        <h3 class="text-xl font-extrabold mb-2" data-i18n="d1Title">Support a child's education</h3>
+                        <p class="text-sky-100/90 text-xs sm:text-sm leading-relaxed mb-6 flex-grow" data-i18n="d1Text">Help cover school fees, books, uniforms and meals for children in need.</p>
+                        <a href="https://wa.me/2399860074?text=Hello%20FEHB%20International,%20I%20would%20like%20to%20donate%20to%20support%20children's%20education." target="_blank" rel="noopener" class="inline-flex items-center justify-center bg-gold text-navy font-extrabold text-xs px-6 py-3.5 rounded-full hover:brightness-95 transition" data-i18n="donateCta">Donate via WhatsApp →</a>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald/30 flex items-center justify-center text-xl mb-5">🛠</div>
+                        <h3 class="text-xl font-extrabold mb-2" data-i18n="d2Title">Fund skills training</h3>
+                        <p class="text-sky-100/90 text-xs sm:text-sm leading-relaxed mb-6 flex-grow" data-i18n="d2Text">Provide trade training, starter tools and mentorship for young people and adults.</p>
+                        <a href="https://wa.me/2399860074?text=Hello%20FEHB%20International,%20I%20would%20like%20to%20donate%20to%20support%20skills%20training." target="_blank" rel="noopener" class="inline-flex items-center justify-center bg-gold text-navy font-extrabold text-xs px-6 py-3.5 rounded-full hover:brightness-95 transition" data-i18n="donateCta">Donate via WhatsApp →</a>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald/30 flex items-center justify-center text-xl mb-5">🌱</div>
+                        <h3 class="text-xl font-extrabold mb-2" data-i18n="d3Title">Grow food security</h3>
+                        <p class="text-sky-100/90 text-xs sm:text-sm leading-relaxed mb-6 flex-grow" data-i18n="d3Text">Back sustainable farming training and local food security initiatives.</p>
+                        <a href="https://wa.me/2399860074?text=Hello%20FEHB%20International,%20I%20would%20like%20to%20donate%20to%20support%20agriculture%20and%20food%20security." target="_blank" rel="noopener" class="inline-flex items-center justify-center bg-gold text-navy font-extrabold text-xs px-6 py-3.5 rounded-full hover:brightness-95 transition" data-i18n="donateCta">Donate via WhatsApp →</a>
+                    </div>
+                </div>
+
+                <p class="mt-8 text-xs text-sky-200/80 max-w-2xl" data-i18n="donateNote">To protect donors, official donation details are shared directly by our team once you get in touch.</p>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-24 bg-paper border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+                    <div class="lg:col-span-5 space-y-6">
+                        <div>
+                            <span class="text-emerald text-xs font-black tracking-[0.2em] uppercase" data-i18n="contactKicker">Talk to us</span>
+                            <h2 class="text-3xl sm:text-4xl font-black text-navy tracking-tight mt-2" data-i18n="contactTitle">Let's create opportunity together.</h2>
+                        </div>
+                        <p class="text-gray-600 text-sm sm:text-base leading-relaxed" data-i18n="contactText">
+                            For partnership, volunteering, donations or general enquiries, send us a message or reach us instantly on WhatsApp.
+                        </p>
+                        <div class="space-y-4 pt-4">
+                            <div class="flex items-center gap-4 p-4 rounded-2xl bg-white border border-gray-200">
+                                <div class="w-10 h-10 rounded-xl bg-emerald/10 text-emerald flex items-center justify-center font-bold text-lg">📞</div>
+                                <div>
+                                    <div class="text-xs font-bold text-gray-400 uppercase tracking-wider" data-i18n="contactPhone">WhatsApp & Direct Line</div>
+                                    <a href="https://wa.me/2399860074" target="_blank" rel="noopener" class="text-sm font-extrabold text-emerald hover:underline">+239 986 0074</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 p-4 rounded-2xl bg-white border border-gray-200">
+                                <div class="w-10 h-10 rounded-xl bg-emerald/10 text-emerald flex items-center justify-center font-bold text-lg">⌖</div>
+                                <div>
+                                    <div class="text-xs font-bold text-gray-400 uppercase tracking-wider" data-i18n="contactLocation">Location</div>
+                                    <div class="text-sm font-extrabold text-navy" data-i18n="locName">São Tomé and Príncipe</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7">
+                        <div class="bg-white p-8 sm:p-10 rounded-3xl border border-gray-200 shadow-sm">
+                            <div id="formSuccess" role="status" class="hidden mb-6 p-4 rounded-2xl bg-emerald text-white text-xs font-bold" data-i18n="formSuccess">
+                                ✓ Your message is ready. Opening now…
+                            </div>
+                            <form id="contactForm" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label for="fName" class="block text-xs font-extrabold text-navy uppercase tracking-wider" data-i18n="formName">Your name</label>
+                                    <input id="fName" required type="text" name="name" autocomplete="name" data-i18n-ph="formNamePh" placeholder="Full name" class="w-full bg-paper border border-gray-300 rounded-xl px-4 py-3.5 text-xs text-navy focus:outline-none focus:border-emerald">
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="fEmail" class="block text-xs font-extrabold text-navy uppercase tracking-wider" data-i18n="formEmail">Email address</label>
+                                    <input id="fEmail" required type="email" name="email" autocomplete="email" placeholder="you@example.com" class="w-full bg-paper border border-gray-300 rounded-xl px-4 py-3.5 text-xs text-navy focus:outline-none focus:border-emerald">
+                                </div>
+                                <div class="sm:col-span-2 space-y-2">
+                                    <label for="fSubject" class="block text-xs font-extrabold text-navy uppercase tracking-wider" data-i18n="formSubject">I am contacting about</label>
+                                    <select id="fSubject" name="subject" class="w-full bg-paper border border-gray-300 rounded-xl px-4 py-3.5 text-xs text-navy focus:outline-none focus:border-emerald cursor-pointer">
+                                        <option value="General enquiry" data-i18n="optGeneral">General enquiry</option>
+                                        <option value="Volunteering" data-i18n="optVolunteer">Volunteering</option>
+                                        <option value="Partnership" data-i18n="optPartner">Partnership</option>
+                                        <option value="Donation" data-i18n="optDonation">Donation support</option>
+                                    </select>
+                                </div>
+                                <div class="sm:col-span-2 space-y-2">
+                                    <label for="fMessage" class="block text-xs font-extrabold text-navy uppercase tracking-wider" data-i18n="formMessage">Your message</label>
+                                    <textarea id="fMessage" required name="message" rows="4" data-i18n-ph="formMessagePh" placeholder="How would you like to work with FEHB?" class="w-full bg-paper border border-gray-300 rounded-xl p-4 text-xs text-navy focus:outline-none focus:border-emerald"></textarea>
+                                </div>
+                                <div class="sm:col-span-2 pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <button type="submit" data-channel="whatsapp" class="bg-[#25D366] hover:bg-[#20ba5a] text-white font-extrabold text-xs py-4 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2">
+                                        <span data-i18n="formSendWa">Send via WhatsApp</span>
+                                    </button>
+                                    <button type="submit" data-channel="email" class="bg-emerald hover:bg-emerald-dark text-white font-extrabold text-xs py-4 rounded-xl transition-all shadow-lg shadow-emerald/20 flex items-center justify-center gap-2">
+                                        <span data-i18n="formSendEmail">Prepare email</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox (NEW) -->
+    <div id="lightbox" class="fixed inset-0 z-[60] hidden bg-black/90 items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Gallery image">
+        <button id="lbClose" aria-label="Close" class="absolute top-4 right-4 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white text-xl">✕</button>
+        <button id="lbPrev" aria-label="Previous image" class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white">❮</button>
+        <button id="lbNext" aria-label="Next image" class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white">❯</button>
+        <figure class="max-w-5xl w-full">
+            <img id="lbImg" src="" alt="" class="w-full max-h-[80vh] object-contain rounded-xl">
+            <figcaption id="lbCap" class="text-center text-white text-sm font-semibold mt-4"></figcaption>
+        </figure>
+    </div>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/2399860074?text=Hello%20FEHB%20International,%20I%20would%20like%20to%20know%20more%20about%20your%20programmes." target="_blank" rel="noopener" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110 whatsapp-pulse">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.124-.669-1.612-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-navy-dark text-sky-100 pt-16 pb-12 border-t border-navy/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
+                <div class="lg:col-span-2 space-y-4">
+                    <a href="#home" class="flex items-center gap-3">
+                        <div class="h-10 w-10 rounded-xl bg-emerald text-white flex items-center justify-center font-black text-xl shadow-md">F</div>
+                        <div>
+                            <span class="text-sm font-extrabold tracking-wider text-white block leading-tight">FEHB INTERNATIONAL</span>
+                            <small class="text-[9px] tracking-[0.15em] font-bold text-emerald-400 block mt-0.5" data-i18n="brandSub">HOPE · SKILLS · OPPORTUNITIES</small>
+                        </div>
+                    </a>
+                    <p class="text-xs text-sky-200/80 max-w-sm leading-relaxed" data-i18n="footAbout">
+                        Supporting vulnerable children and adults through Beauty, Agriculture, Education, Technology, and Humanitarian Development in São Tomé and Príncipe.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-black uppercase tracking-wider text-white mb-4" data-i18n="footExplore">Explore</h4>
+                    <ul class="space-y-2.5 text-xs">
+                        <li><a href="#about" class="text-sky-200/80 hover:text-white transition-colors" data-i18n="navAbout">About us</a></li>
+                        <li><a href="#pillars" class="text-sky-200/80 hover:text-white transition-colors" data-i18n="navPillars">5 Pillars</a></li>
+                        <li><a href="#programmes" class="text-sky-200/80 hover:text-white transition-colors" data-i18n="navPrograms">Programmes</a></li>
+                        <li><a href="#gallery" class="text-sky-200/80 hover:text-white transition-colors" data-i18n="navGallery">Gallery</a></li>
+                        <li><a href="#team" class="text-sky-200/80 hover:text-white transition-colors" data-i18n="navTeam">Our team</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-black uppercase tracking-wider text-white mb-4" data-i18n="footTake">Take part</h4>
+                    <ul class="space-y-2.5 text-xs">
+                        <li><a href="#involved" class="text-sky-200/80 hover:text-white transition-colors" data-i18n="footVolunteer">Volunteer</a></li>
+                        <li><a href="#donate" class="text-sky-200/80 hover:text-white transition-colors" data-i18n="footDonate">Donate</a></li>
+                        <li><a href="https://wa.me/2399860074" target="_blank" rel="noopener" class="text-emerald-400 font-bold hover:underline">WhatsApp: +239 986 0074</a></li>
+                        <li><a href="#contact" class="text-sky-200/80 hover:text-white transition-colors" data-i18n="navContact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-black uppercase tracking-wider text-white mb-4" data-i18n="footPrinciples">Core Principles</h4>
+                    <ul class="space-y-2.5 text-xs text-sky-200/80">
+                        <li data-i18n="pillar1Title">Beauty & Confidence</li>
+                        <li data-i18n="pillar2Title">Agriculture & Farming</li>
+                        <li data-i18n="pillar3Title">Education & Literacy</li>
+                        <li data-i18n="pillar4Title">Technology & Digital Skills</li>
+                        <li data-i18n="pillar5Title">Humanitarian Development</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-sky-300/60 font-medium">
+                <div>© <span id="currentYear"></span> FEHB International. <span data-i18n="rights">All rights reserved.</span></div>
+                <div><span data-i18n="locName">São Tomé and Príncipe</span> · WhatsApp: +239 986 0074</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const dictionary = {
+            en: {
+                topLocation: "São Tomé and Príncipe · International Non-Profit Foundation",
+                topMission: "Beauty · Agriculture · Education · Technology · Humanitarian",
+                brandSub: "HOPE · SKILLS · OPPORTUNITIES",
+                navHome: "Home", navAbout: "About us", navPillars: "5 Pillars", navPrograms: "Programmes",
+                navImpact: "Our impact", navGallery: "Gallery", navTeam: "Our team", navInvolved: "Get involved",
+                navContact: "Contact", navSupport: "Support FEHB",
+                mobileLangLabel: "Select Language",
+                heroEyebrow: "Building Skills. Creating Opportunities. Helping Communities.",
+                heroTitle: 'Every person deserves a chance to <span class="text-gold font-extrabold">learn, grow and thrive.</span>',
+                heroText: "FEHB International empowers vulnerable children and adults through Beauty, Agriculture, Education, Technology, and Humanitarian Development in São Tomé and Príncipe.",
+                heroPrimary: "Explore our pillars", heroDonate: "Donate", heroSecondary: "Contact via WhatsApp",
+                tagBeauty: "Beauty", tagAgri: "Agriculture", tagEdu: "Education", tagTech: "Technology", tagHum: "Humanitarian",
+                floatOneTitle: "SKILLS", floatOne: "Creating opportunities",
+                trust1: "Dignity for every person without exception",
+                trust2: "Practical skill building for all ages",
+                trust3: "Empowering communities across São Tomé",
+                aboutKicker: "Who we are",
+                aboutTitle: "A foundation built on dignity, opportunity and hope.",
+                aboutP1: "FEHB International is a non-profit, non-political, non-religious and non-governmental foundation based in São Tomé and Príncipe.",
+                aboutP2: "We champion 5 core pillars: <strong>Beauty, Agriculture, Education, Technology, and Humanitarian Development</strong> to empower vulnerable children, youth and adults.",
+                val1: "Love & dignity", val2: "Inclusion & unity", val3: "Honesty & discipline", val4: "Hard work & service",
+                aboutLink: "Connect with our team",
+                pillarsKicker: "Our Core Areas", pillarsTitle: "The 5 Pillars of FEHB International",
+                pillarsIntro: "Our comprehensive approach covers beauty, agriculture, education, technology, and humanitarian development.",
+                pillar1Title: "Beauty & Confidence",
+                pillar1Desc: "Professional grooming, cosmetics and vocational beauty training empowering individuals with self-esteem and independent trade skills.",
+                pillar2Title: "Agriculture & Farming",
+                pillar2Desc: "Sustainable agriculture training, farming techniques, and local food security initiatives across São Tomé and Príncipe.",
+                pillar3Title: "Education & Literacy",
+                pillar3Desc: "School support, books, uniforms, tutoring, and adult literacy programs opening doors to lifelong learning.",
+                pillar4Title: "Technology & Digital Skills",
+                pillar4Desc: "Computer literacy, digital workshops, and technical training preparing youth for the modern digital economy.",
+                pillar5Title: "Humanitarian Development",
+                pillar5Desc: "Comprehensive community care, disability inclusion, family support, and safeguarding vulnerable populations with unconditional compassion.",
+                programKicker: "What we do", programTitle: "Practical support. Lasting possibilities.",
+                programIntro: "Our work focuses on helping vulnerable people access learning, develop useful vocational skills, and participate fully in society.",
+                p1Title: "Education for all",
+                p1Text: "School support for vulnerable children, fees, books, uniforms, transport and feeding, alongside adult literacy.",
+                p2Title: "Vocational skills & livelihoods",
+                p2Text: "Trade training, apprenticeships, starter tools and mentorship to help youth build sustainable livelihoods.",
+                p3Title: "Disability inclusion & care",
+                p3Text: "Promoting access, dignity and participation for persons with disabilities and supporting vulnerable families.",
+                learnMore: "Learn more →",
+                impactKicker: "Our commitment", impactTitle: "Impact begins with one opportunity.",
+                impactText: "We are building rigorous partnerships across São Tomé and Príncipe that turn compassion into practical support.",
+                impactCta: "Partner with FEHB →",
+                impact1Title: "Education Access", impact1: "Removing financial barriers for school children.",
+                impact2Title: "Skills & Training", impact2: "Beauty, agriculture and tech vocational training.",
+                impact3Title: "Inclusive Communities", impact3: "Advocating for equal social participation.",
+                impact4Title: "Humanitarian Care", impact4: "Safeguarding vulnerable families with guidance.",
+                galleryKicker: "Gallery", galleryTitle: "Moments from our work",
+                galleryIntro: "A glimpse of learning, training and community life across our five pillars.",
+                g1: "Learning together in the classroom", g2: "Fields and food security", g3: "Digital skills workshop",
+                g4: "Building confidence and community", g5: "School support for children", g6: "Vocational training", g7: "Inclusion and care",
+                teamKicker: "Our team", teamTitle: "The people behind each pillar",
+                teamIntro: "Dedicated teams and volunteers work together to deliver every programme with dignity and discipline.",
+                t1Title: "Beauty & Confidence team", t1Desc: "Trainers and mentors who teach grooming and beauty trades.",
+                t2Title: "Agriculture team", t2Desc: "Farmers and field instructors sharing sustainable growing methods.",
+                t3Title: "Education team", t3Desc: "Teachers and tutors supporting children and adult learners.",
+                t4Title: "Technology team", t4Desc: "Volunteers who run computer and digital literacy workshops.",
+                t5Title: "Humanitarian team", t5Desc: "Community workers supporting families and disability inclusion.",
+                joinTitle: "Join the team",
+                joinText: "We welcome volunteers with teaching, farming, technical or community skills.",
+                joinCta: "Join us on WhatsApp →",
+                involveKicker: "Be part of the change", involveTitle: "There is a place for you in this work.",
+                volTitle: "Volunteer your time",
+                volText: "Share your professional knowledge, teaching skills, or personal time to support education, agriculture and training workshops.",
+                volCta: "Chat on WhatsApp to Volunteer →",
+                partnerTitle: "Partner with FEHB",
+                partnerText: "Schools, training centers, corporate donors and community groups can help us expand opportunity and reach.",
+                partnerCta: "Explore partnership →",
+                donateKicker: "Support our work", donateTitle: "Your gift becomes someone's opportunity.",
+                donateIntro: "Choose the area you care about most. Every contribution supports practical learning, skills and care.",
+                d1Title: "Support a child's education", d1Text: "Help cover school fees, books, uniforms and meals for children in need.",
+                d2Title: "Fund skills training", d2Text: "Provide trade training, starter tools and mentorship for young people and adults.",
+                d3Title: "Grow food security", d3Text: "Back sustainable farming training and local food security initiatives.",
+                donateCta: "Donate via WhatsApp →",
+                donateNote: "To protect donors, official donation details are shared directly by our team once you get in touch.",
+                contactKicker: "Talk to us", contactTitle: "Let's create opportunity together.",
+                contactText: "For partnership, volunteering, donations or general enquiries, send us a message or reach us instantly on WhatsApp.",
+                contactPhone: "WhatsApp & Direct Line", contactLocation: "Location", locName: "São Tomé and Príncipe",
+                formName: "Your name", formEmail: "Email address", formSubject: "I am contacting about", formMessage: "Your message",
+                formNamePh: "Full name", formMessagePh: "How would you like to work with FEHB?",
+                optGeneral: "General enquiry", optVolunteer: "Volunteering", optPartner: "Partnership", optDonation: "Donation support",
+                formSendWa: "Send via WhatsApp", formSendEmail: "Prepare email",
+                formSuccess: "✓ Your message is ready. Opening now…",
+                slide1Tag: "Education", slide1Title: "Empowering through quality schooling and literacy",
+                slide2Tag: "Agriculture", slide2Title: "Sustainable farming, skills and food security",
+                slide3Tag: "Technology", slide3Title: "Digital literacy and modern vocational tools",
+                slide4Tag: "Beauty & Humanitarian", slide4Title: "Building confidence, dignity and inclusive communities",
+                footAbout: "Supporting vulnerable children and adults through Beauty, Agriculture, Education, Technology, and Humanitarian Development in São Tomé and Príncipe.",
+                footExplore: "Explore", footTake: "Take part", footVolunteer: "Volunteer", footDonate: "Donate",
+                footPrinciples: "Core Principles", rights: "All rights reserved."
+            },
+            fr: {
+                topLocation: "São Tomé-et-Príncipe · Fondation internationale à but non lucratif",
+                topMission: "Beauté · Agriculture · Éducation · Technologie · Humanitaire",
+                brandSub: "ESPOIR · COMPÉTENCES · OPPORTUNITÉS",
+                navHome: "Accueil", navAbout: "À propos", navPillars: "5 Piliers", navPrograms: "Programmes",
+                navImpact: "Notre impact", navGallery: "Galerie", navTeam: "Notre équipe", navInvolved: "Participer",
+                navContact: "Contact", navSupport: "Soutenir FEHB",
+                mobileLangLabel: "Choisir la langue",
+                heroEyebrow: "Construire des compétences. Créer des opportunités. Aider les communautés.",
+                heroTitle: 'Chaque personne mérite la chance <span class="text-gold font-extrabold">d’apprendre, de grandir et de réussir.</span>',
+                heroText: "FEHB International autonomise les enfants et adultes vulnérables à travers la beauté, l'agriculture, l'éducation, la technologie et le développement humanitaire à São Tomé-et-Príncipe.",
+                heroPrimary: "Explorer nos piliers", heroDonate: "Faire un don", heroSecondary: "Contact WhatsApp",
+                tagBeauty: "Beauté", tagAgri: "Agriculture", tagEdu: "Éducation", tagTech: "Technologie", tagHum: "Humanitaire",
+                floatOneTitle: "COMPÉTENCES", floatOne: "Créer des opportunités",
+                trust1: "Dignité pour chaque personne sans exception",
+                trust2: "Développement de compétences pratiques",
+                trust3: "Soutenir les communautés à São Tomé",
+                aboutKicker: "Qui sommes-nous",
+                aboutTitle: "Une fondation fondée sur la dignité, l'opportunité et l'espoir.",
+                aboutP1: "FEHB International est une fondation à but non lucratif, non politique, non religieuse et non gouvernementale basée à São Tomé-et-Príncipe.",
+                aboutP2: "Nous défendons 5 piliers clés : <strong>Beauté, Agriculture, Éducation, Technologie et Développement Humanitaire</strong> pour autonomiser les enfants, les jeunes et les adultes vulnérables.",
+                val1: "Amour & dignité", val2: "Inclusion & unité", val3: "Honnêteté & discipline", val4: "Travail & service",
+                aboutLink: "Contacter notre équipe",
+                pillarsKicker: "Nos Domaines", pillarsTitle: "Les 5 Piliers de FEHB International",
+                pillarsIntro: "Notre approche couvre la beauté, l'agriculture, l'éducation, la technologie et le développement humanitaire.",
+                pillar1Title: "Beauté & Confiance",
+                pillar1Desc: "Soins professionnels, cosmétiques et formation en esthétique pour développer l'estime de soi et l'autonomie professionnelle.",
+                pillar2Title: "Agriculture & Fermes",
+                pillar2Desc: "Formation agricole durable, techniques de culture et initiatives de sécurité alimentaire à São Tomé-et-Príncipe.",
+                pillar3Title: "Éducation & Alphabétisation",
+                pillar3Desc: "Soutien scolaire, livres, uniformes, tutorat et programmes d'alphabétisation pour adultes.",
+                pillar4Title: "Technologie & Numérique",
+                pillar4Desc: "Alphabétisation informatique, ateliers numériques et formation technique pour les jeunes.",
+                pillar5Title: "Développement Humanitaire",
+                pillar5Desc: "Soutien communautaire, inclusion du handicap, aide aux familles et protection des personnes vulnérables avec compassion.",
+                programKicker: "Ce que nous faisons", programTitle: "Soutien concret. Possibilités durables.",
+                programIntro: "Aider les personnes vulnérables à accéder à l'apprentissage, à acquérir des compétences utiles et à participer pleinement à la société.",
+                p1Title: "Éducation pour tous",
+                p1Text: "Soutien scolaire pour les enfants vulnérables : frais, livres, uniformes, transport et repas, ainsi que l'alphabétisation des adultes.",
+                p2Title: "Compétences professionnelles",
+                p2Text: "Formation aux métiers, apprentissage, outils de départ et mentorat pour des moyens de subsistance durables.",
+                p3Title: "Inclusion du handicap",
+                p3Text: "Promouvoir l'accès, la dignité et la participation des personnes handicapées et soutenir les familles vulnérables.",
+                learnMore: "En savoir plus →",
+                impactKicker: "Notre engagement", impactTitle: "L'impact commence par une opportunité.",
+                impactText: "Nous bâtissons des partenariats solides à São Tomé-et-Príncipe pour transformer la compassion en soutien concret.",
+                impactCta: "Devenir partenaire →",
+                impact1Title: "Accès à l'Éducation", impact1: "Suppression des barrières financières scolaires.",
+                impact2Title: "Compétences & Formation", impact2: "Formation professionnelle en beauté, agriculture et technologie.",
+                impact3Title: "Communautés Inclusives", impact3: "Plaidoyer pour une participation sociale égale.",
+                impact4Title: "Soin Humanitaire", impact4: "Protection et orientation des familles vulnérables.",
+                galleryKicker: "Galerie", galleryTitle: "Moments de notre action",
+                galleryIntro: "Un aperçu de l'apprentissage, de la formation et de la vie communautaire à travers nos cinq piliers.",
+                g1: "Apprendre ensemble en classe", g2: "Champs et sécurité alimentaire", g3: "Atelier de compétences numériques",
+                g4: "Confiance et communauté", g5: "Soutien scolaire aux enfants", g6: "Formation professionnelle", g7: "Inclusion et soin",
+                teamKicker: "Notre équipe", teamTitle: "Les personnes derrière chaque pilier",
+                teamIntro: "Des équipes et des bénévoles dévoués réalisent chaque programme avec dignité et discipline.",
+                t1Title: "Équipe Beauté & Confiance", t1Desc: "Formateurs et mentors en soins et métiers de la beauté.",
+                t2Title: "Équipe Agriculture", t2Desc: "Agriculteurs et instructeurs partageant des méthodes durables.",
+                t3Title: "Équipe Éducation", t3Desc: "Enseignants et tuteurs auprès des enfants et des adultes.",
+                t4Title: "Équipe Technologie", t4Desc: "Bénévoles animant des ateliers d'informatique et de culture numérique.",
+                t5Title: "Équipe Humanitaire", t5Desc: "Agents communautaires soutenant les familles et l'inclusion du handicap.",
+                joinTitle: "Rejoindre l'équipe",
+                joinText: "Nous accueillons les bénévoles ayant des compétences en enseignement, agriculture, technique ou action communautaire.",
+                joinCta: "Nous rejoindre sur WhatsApp →",
+                involveKicker: "Participez au changement", involveTitle: "Il y a une place pour vous dans cette mission.",
+                volTitle: "Devenir bénévole",
+                volText: "Partagez vos connaissances, vos compétences d'enseignement ou votre temps pour soutenir l'éducation, l'agriculture et les ateliers de formation.",
+                volCta: "WhatsApp pour le bénévolat →",
+                partnerTitle: "Devenir partenaire",
+                partnerText: "Écoles, centres de formation, donateurs et groupes communautaires peuvent nous aider à élargir notre portée.",
+                partnerCta: "Explorer un partenariat →",
+                donateKicker: "Soutenez notre action", donateTitle: "Votre don devient l'opportunité de quelqu'un.",
+                donateIntro: "Choisissez le domaine qui vous tient le plus à cœur. Chaque contribution soutient l'apprentissage, les compétences et le soin.",
+                d1Title: "Soutenir l'éducation d'un enfant", d1Text: "Contribuez aux frais de scolarité, livres, uniformes et repas des enfants dans le besoin.",
+                d2Title: "Financer la formation", d2Text: "Offrez formation aux métiers, outils de départ et mentorat aux jeunes et aux adultes.",
+                d3Title: "Renforcer la sécurité alimentaire", d3Text: "Soutenez la formation agricole durable et les initiatives alimentaires locales.",
+                donateCta: "Donner via WhatsApp →",
+                donateNote: "Pour protéger les donateurs, les coordonnées officielles de don sont communiquées directement par notre équipe après votre prise de contact.",
+                contactKicker: "Parlons ensemble", contactTitle: "Créons des opportunités ensemble.",
+                contactText: "Pour un partenariat, du bénévolat, un don ou toute question, envoyez-nous un message ou contactez-nous directement sur WhatsApp.",
+                contactPhone: "WhatsApp & ligne directe", contactLocation: "Localisation", locName: "São Tomé-et-Príncipe",
+                formName: "Votre nom", formEmail: "Adresse e-mail", formSubject: "Sujet de votre message", formMessage: "Votre message",
+                formNamePh: "Nom complet", formMessagePh: "Comment souhaitez-vous collaborer avec FEHB ?",
+                optGeneral: "Question générale", optVolunteer: "Bénévolat", optPartner: "Partenariat", optDonation: "Soutien par don",
+                formSendWa: "Envoyer via WhatsApp", formSendEmail: "Préparer l'e-mail",
+                formSuccess: "✓ Votre message est prêt. Ouverture en cours…",
+                slide1Tag: "Éducation", slide1Title: "Autonomiser grâce à la scolarisation et à l'alphabétisation",
+                slide2Tag: "Agriculture", slide2Title: "Agriculture durable et sécurité alimentaire",
+                slide3Tag: "Technologie", slide3Title: "Alphabétisation numérique et outils modernes",
+                slide4Tag: "Beauté & Humanitaire", slide4Title: "Confiance, dignité et communautés inclusives",
+                footAbout: "Soutenir les enfants et adultes vulnérables à travers la beauté, l'agriculture, l'éducation, la technologie et le développement humanitaire à São Tomé-et-Príncipe.",
+                footExplore: "Explorer", footTake: "Participer", footVolunteer: "Bénévolat", footDonate: "Faire un don",
+                footPrinciples: "Principes clés", rights: "Tous droits réservés."
+            },
+            pt: {
+                topLocation: "São Tomé e Príncipe · Fundação Internacional sem fins lucrativos",
+                topMission: "Beleza · Agricultura · Educação · Tecnologia · Humanitário",
+                brandSub: "ESPERANÇA · COMPETÊNCIAS · OPORTUNIDADES",
+                navHome: "Início", navAbout: "Sobre nós", navPillars: "5 Pilares", navPrograms: "Programas",
+                navImpact: "Nosso impacto", navGallery: "Galeria", navTeam: "Nossa equipa", navInvolved: "Participe",
+                navContact: "Contacto", navSupport: "Apoiar a FEHB",
+                mobileLangLabel: "Selecionar Idioma",
+                heroEyebrow: "Construindo Competências. Criando Oportunidades. Ajudando Comunidades.",
+                heroTitle: 'Todas as pessoas merecem a oportunidade de <span class="text-gold font-extrabold">aprender, crescer e prosperar.</span>',
+                heroText: "A FEHB International capacita crianças e adultos vulneráveis através da Beleza, Agricultura, Educação, Tecnologia e Desenvolvimento Humanitário em São Tomé e Príncipe.",
+                heroPrimary: "Explorar pilares", heroDonate: "Doar", heroSecondary: "Contacto WhatsApp",
+                tagBeauty: "Beleza", tagAgri: "Agricultura", tagEdu: "Educação", tagTech: "Tecnologia", tagHum: "Humanitário",
+                floatOneTitle: "COMPETÊNCIAS", floatOne: "Criando oportunidades",
+                trust1: "Dignidade para todas as pessoas sem exceção",
+                trust2: "Desenvolvimento de competências práticas",
+                trust3: "Apoiando comunidades em São Tomé",
+                aboutKicker: "Quem somos",
+                aboutTitle: "Uma fundação baseada na dignidade, oportunidade e esperança.",
+                aboutP1: "A FEHB International é uma fundação sem fins lucrativos, apolítica, não religiosa e não governamental, baseada em São Tomé e Príncipe.",
+                aboutP2: "Defendemos 5 pilares centrais: <strong>Beleza, Agricultura, Educação, Tecnologia e Desenvolvimento Humanitário</strong> para capacitar crianças, jovens e adultos vulneráveis.",
+                val1: "Amor & dignidade", val2: "Inclusão & união", val3: "Honestidade & disciplina", val4: "Trabalho & serviço",
+                aboutLink: "Fale com a nossa equipa",
+                pillarsKicker: "Áreas de Atuação", pillarsTitle: "Os 5 Pilares da FEHB International",
+                pillarsIntro: "A nossa abordagem abrange beleza, agricultura, educação, tecnologia e desenvolvimento humanitário.",
+                pillar1Title: "Beleza & Confiança",
+                pillar1Desc: "Cuidados pessoais, cosmética e formação profissional em estética para reforçar a autoestima e a independência.",
+                pillar2Title: "Agricultura & Exploração",
+                pillar2Desc: "Formação agrícola sustentável, técnicas de cultivo e iniciativas de segurança alimentar em São Tomé e Príncipe.",
+                pillar3Title: "Educação & Alfabetização",
+                pillar3Desc: "Apoio escolar, livros, uniformes, explicações e programas de alfabetização de adultos.",
+                pillar4Title: "Tecnologia & Digital",
+                pillar4Desc: "Alfabetização informática, workshops digitais e formação técnica para a juventude.",
+                pillar5Title: "Desenvolvimento Humanitário",
+                pillar5Desc: "Apoio comunitário, inclusão da deficiência, apoio às famílias e proteção de pessoas vulneráveis com compaixão.",
+                programKicker: "O que fazemos", programTitle: "Apoio prático. Oportunidades duradouras.",
+                programIntro: "Ajudar pessoas vulneráveis a aceder à aprendizagem, desenvolver competências úteis e participar plenamente na sociedade.",
+                p1Title: "Educação para todos",
+                p1Text: "Apoio escolar a crianças vulneráveis: propinas, livros, uniformes, transporte e alimentação, além da alfabetização de adultos.",
+                p2Title: "Competências profissionais",
+                p2Text: "Formação técnica, estágios, ferramentas iniciais e mentoria para meios de subsistência sustentáveis.",
+                p3Title: "Inclusão da deficiência",
+                p3Text: "Promover acesso, dignidade e participação das pessoas com deficiência e apoiar famílias vulneráveis.",
+                learnMore: "Saiba mais →",
+                impactKicker: "O nosso compromisso", impactTitle: "O impacto começa com uma oportunidade.",
+                impactText: "Construímos parcerias sólidas em São Tomé e Príncipe que transformam compaixão em apoio prático.",
+                impactCta: "Seja parceiro da FEHB →",
+                impact1Title: "Acesso à Educação", impact1: "Remoção de barreiras financeiras escolares.",
+                impact2Title: "Competências & Formação", impact2: "Formação em beleza, agricultura e tecnologia.",
+                impact3Title: "Comunidades Inclusivas", impact3: "Defesa da igualdade de participação social.",
+                impact4Title: "Cuidado Humanitário", impact4: "Salvaguarda e orientação a famílias vulneráveis.",
+                galleryKicker: "Galeria", galleryTitle: "Momentos do nosso trabalho",
+                galleryIntro: "Um olhar sobre a aprendizagem, a formação e a vida comunitária nos nossos cinco pilares.",
+                g1: "Aprender juntos na sala de aula", g2: "Campos e segurança alimentar", g3: "Workshop de competências digitais",
+                g4: "Confiança e comunidade", g5: "Apoio escolar às crianças", g6: "Formação profissional", g7: "Inclusão e cuidado",
+                teamKicker: "Nossa equipa", teamTitle: "As pessoas por trás de cada pilar",
+                teamIntro: "Equipas e voluntários dedicados realizam cada programa com dignidade e disciplina.",
+                t1Title: "Equipa Beleza & Confiança", t1Desc: "Formadores e mentores de cuidados pessoais e ofícios da beleza.",
+                t2Title: "Equipa de Agricultura", t2Desc: "Agricultores e instrutores que partilham métodos sustentáveis.",
+                t3Title: "Equipa de Educação", t3Desc: "Professores e tutores que apoiam crianças e adultos.",
+                t4Title: "Equipa de Tecnologia", t4Desc: "Voluntários que orientam workshops de informática e literacia digital.",
+                t5Title: "Equipa Humanitária", t5Desc: "Agentes comunitários que apoiam famílias e a inclusão da deficiência.",
+                joinTitle: "Junte-se à equipa",
+                joinText: "Recebemos voluntários com competências de ensino, agricultura, técnicas ou comunitárias.",
+                joinCta: "Junte-se pelo WhatsApp →",
+                involveKicker: "Faça parte da mudança", involveTitle: "Há um lugar para si nesta missão.",
+                volTitle: "Seja voluntário",
+                volText: "Partilhe o seu conhecimento, competências de ensino ou o seu tempo para apoiar educação, agricultura e workshops de formação.",
+                volCta: "WhatsApp para Voluntariado →",
+                partnerTitle: "Seja parceiro da FEHB",
+                partnerText: "Escolas, centros de formação, doadores e grupos comunitários podem ajudar-nos a ampliar o alcance.",
+                partnerCta: "Explorar parceria →",
+                donateKicker: "Apoie o nosso trabalho", donateTitle: "A sua doação torna-se a oportunidade de alguém.",
+                donateIntro: "Escolha a área que mais lhe interessa. Cada contributo apoia aprendizagem prática, competências e cuidado.",
+                d1Title: "Apoiar a educação de uma criança", d1Text: "Ajude a cobrir propinas, livros, uniformes e refeições de crianças carenciadas.",
+                d2Title: "Financiar formação profissional", d2Text: "Ofereça formação técnica, ferramentas iniciais e mentoria a jovens e adultos.",
+                d3Title: "Fortalecer a segurança alimentar", d3Text: "Apoie a formação agrícola sustentável e iniciativas locais de segurança alimentar.",
+                donateCta: "Doar via WhatsApp →",
+                donateNote: "Para proteg
