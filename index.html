@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102b46">
+<meta name="description" content="FEHB Organization supports vulnerable children and adults through education, vocational skills, dignity and inclusion in São Tomé and Príncipe.">
+<title>FEHB Organization | Hope Through Education & Skills</title>
+<style>
+:root{--navy:#102b46;--navy2:#173b5c;--green:#18745d;--mint:#e8f3ee;--gold:#e7b95d;--ink:#1d2b38;--muted:#657789;--paper:#f7f9f8;--line:#e4ebe7;--white:#fff;--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font:15px/1.65 Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:#fff}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}.container{width:min(1160px,calc(100% - 44px));margin:auto}.topline{background:var(--navy);color:#dce8ef;font-size:11px}.topline .container{display:flex;justify-content:space-between;gap:16px;padding:8px 0}.topline a{color:#fff}.header{position:sticky;top:0;z-index:20;background:#ffffffed;backdrop-filter:blur(14px);border-bottom:1px solid #e8eeeb}.navwrap{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;min-width:215px}.brandmark{height:46px;width:46px;border-radius:15px;background:var(--green);display:grid;place-items:center;color:#fff;font-weight:900;font-size:24px;box-shadow:0 7px 18px #18745d30}.brandname{font-size:14px;font-weight:850;letter-spacing:.04em;color:var(--navy);line-height:1.25}.brandname small{display:block;font-size:9px;letter-spacing:.17em;color:var(--green);margin-top:4px}.navlinks{display:flex;align-items:center;gap:25px;font-size:12px;font-weight:700;color:#405366}.navlinks a:hover{color:var(--green)}.navright{display:flex;align-items:center;gap:10px}.lang{border:1px solid var(--line);border-radius:10px;padding:9px;background:#fff;color:var(--navy);font-size:11px}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:12px 20px;background:var(--green);color:#fff;font-weight:800;font-size:12px;cursor:pointer;transition:.2s}.btn:hover{background:#105c49;transform:translateY(-1px)}.btn.outline{background:transparent;border:1px solid #ffffff8a;color:#fff}.btn.light{background:#fff;color:var(--navy)}.mobiletoggle{display:none;border:0;background:#eff5f1;border-radius:10px;padding:9px 12px;color:var(--navy);font-size:20px}
+.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:580px;height:580px;border-radius:50%;border:1px solid #ffffff18;right:-130px;top:-240px;box-shadow:0 0 0 55px #ffffff08,0 0 0 110px #ffffff05}.hero-grid{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:55px;align-items:center;padding:78px 0 86px}.eyebrow{color:#a9d8c5;font-size:10px;font-weight:900;letter-spacing:.2em;text-transform:uppercase}.hero h1{font-size:clamp(40px,5vw,64px);line-height:1.07;letter-spacing:-.045em;margin:17px 0 20px;max-width:650px}.hero h1 em{font-style:normal;color:#f1c96f}.hero p{color:#d3e0e8;font-size:15px;max-width:550px;margin:0 0 28px}.herobtns{display:flex;gap:12px;flex-wrap:wrap}.hero-note{display:flex;align-items:center;gap:12px;margin-top:34px;color:#c5d4de;font-size:11px}.avatars{display:flex}.avatars span{height:29px;width:29px;border-radius:50%;border:2px solid var(--navy);background:#d5e7df;margin-left:-7px;display:grid;place-items:center;color:var(--navy);font-size:9px;font-weight:900}.avatars span:first-child{margin-left:0}.hero-visual{position:relative;min-height:430px}.hero-photo{position:absolute;inset:0 15px 20px 25px;border-radius:34px;overflow:hidden;background:linear-gradient(145deg,#d2e6da,#6b9a83)}.hero-photo img{height:100%;width:100%;object-fit:cover;display:block}.photo-overlay{position:absolute;inset:0;background:linear-gradient(0deg,#102b4675,transparent 55%)}.floating{position:absolute;background:#fff;color:var(--navy);padding:17px 20px;border-radius:17px;box-shadow:0 16px 45px #06182730}.float-one{left:-8px;bottom:0}.float-two{right:0;top:34px}.float-number{font-size:25px;font-weight:900;line-height:1.2}.float-label{font-size:10px;color:var(--muted)}.float-icon{color:var(--green);font-size:19px}
+.trustbar{background:#f4f8f5;border-bottom:1px solid var(--line)}.trustbar .container{display:grid;grid-template-columns:repeat(3,1fr);padding:22px 0;gap:20px}.trustitem{display:flex;align-items:center;gap:12px;justify-content:center;color:var(--navy);font-size:12px;font-weight:800}.trustitem b{height:35px;width:35px;border-radius:11px;background:#e1eee7;color:var(--green);display:grid;place-items:center;font-size:17px}
+section{scroll-margin-top:90px}.section{padding:88px 0}.section.soft{background:var(--paper)}.sectionhead{max-width:650px;margin-bottom:35px}.kicker{color:var(--green);font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:900}.section h2{font-size:clamp(29px,3.5vw,42px);line-height:1.16;letter-spacing:-.035em;color:var(--navy);margin:10px 0 13px}.sectionhead p{color:var(--muted);margin:0}.aboutgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:65px;align-items:center}.aboutimage{height:440px;border-radius:28px;overflow:hidden;position:relative;background:#dbe9e0}.aboutimage img{width:100%;height:100%;object-fit:cover}.aboutbadge{position:absolute;bottom:20px;left:20px;background:#fff;padding:16px 19px;border-radius:15px;color:var(--navy);font-weight:850;font-size:12px}.aboutcopy p{color:var(--muted)}.values{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:25px 0}.value{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:800;color:var(--navy)}.value i{font-style:normal;color:var(--green);background:var(--mint);width:28px;height:28px;border-radius:9px;display:grid;place-items:center}
+.registration-card{display:grid;grid-template-columns:58px 1fr;gap:8px 20px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;max-width:850px;box-shadow:0 14px 35px #102b4608}.registration-mark{width:48px;height:48px;border-radius:15px;background:var(--mint);color:var(--green);display:grid;place-items:center;font-size:24px;font-weight:900}.registration-details{display:grid;grid-template-columns:1fr 1fr;gap:18px 30px}.registration-row{display:grid;gap:3px}.registration-row span{font-size:10px;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.08em}.registration-row strong{font-size:13px;color:var(--navy)}.registration-note{grid-column:1/-1;border-top:1px solid var(--line);padding-top:15px;margin:12px 0 0;color:var(--muted);font-size:11px}
+.programs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.program{border:1px solid var(--line);border-radius:19px;overflow:hidden;background:#fff;transition:.2s}.program:hover{transform:translateY(-4px);box-shadow:0 16px 35px #102b4610}.program img{width:100%;height:190px;object-fit:cover;display:block}.programbody{padding:20px}.programicon{width:37px;height:37px;border-radius:11px;background:var(--mint);color:var(--green);display:grid;place-items:center;font-size:18px}.program h3{font-size:16px;color:var(--navy);margin:12px 0 6px}.program p{font-size:12px;color:var(--muted);margin:0 0 14px}.textlink{color:var(--green);font-weight:850;font-size:11px}
+.impact{background:var(--green);color:#fff}.impact .kicker{color:#c5e7d7}.impact h2{color:#fff}.impact p{color:#d5e9df}.impactgrid{display:grid;grid-template-columns:1.1fr 1.9fr;gap:45px;align-items:center}.impactstats{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.impactstat{padding:22px;border:1px solid #ffffff35;border-radius:17px;background:#ffffff0c}.impactstat strong{display:block;font-size:32px;line-height:1.2}.impactstat span{font-size:11px;color:#d5e9df}
+.involvegrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.involve{padding:28px;border-radius:20px;background:var(--navy);color:#fff}.involve.alt{background:#f1f6f2;color:var(--navy)}.involve h3{font-size:21px;margin:0 0 8px}.involve p{font-size:12px;color:#d4e0e8;margin:0 0 18px}.involve.alt p{color:var(--muted)}
+.newsgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.news{border:1px solid var(--line);border-radius:17px;padding:21px}.news small{color:var(--green);font-weight:900;text-transform:uppercase;letter-spacing:.12em;font-size:9px}.news h3{color:var(--navy);font-size:15px;margin:10px 0}.news p{font-size:12px;color:var(--muted);margin:0}
+.contactgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px}.contactinfo p{color:var(--muted);font-size:13px}.contactline{display:flex;gap:12px;margin:18px 0;color:var(--navy);font-size:12px;font-weight:750}.contactline b{color:var(--green);font-size:18px}.contactform{background:#fff;border:1px solid var(--line);padding:25px;border-radius:20px;display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:grid;gap:5px}.field.full{grid-column:1/-1}.field label{font-size:10px;font-weight:850;color:var(--navy)}.field input,.field textarea,.field select{width:100%;border:1px solid #dce6e0;border-radius:9px;padding:11px;background:#fff;font-size:12px}.field textarea{min-height:100px;resize:vertical}.formnote{grid-column:1/-1;color:var(--muted);font-size:10px;margin:0}
+.footer{background:#0b2034;color:#d4e0e8;padding:55px 0 20px}.footergrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:35px}.footer .brandname{color:#fff}.footer p{font-size:11px;color:#aebfcb;max-width:280px}.footer h4{font-size:11px;color:#fff;margin:0 0 13px}.footer a{display:block;font-size:11px;color:#b9c8d2;margin:8px 0}.copyright{border-top:1px solid #ffffff20;margin-top:35px;padding-top:17px;display:flex;justify-content:space-between;gap:15px;font-size:10px;color:#91a7b8}
+@media(max-width:950px){.navlinks{gap:14px}.navlinks a{font-size:11px}.brand{min-width:auto}.hero-grid{gap:28px}.aboutgrid{gap:35px}}
+</style>
+</head>
+<body>
+
+<div class="topline">
+  <div class="container">
+    <span>Building Skills. Creating Opportunities.</span>
+    <div class="navlinks">
+      <a href="#about">About Us</a>
+      <a href="#programs">Programs</a>
+      <a href="#impact">Our Impact</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="navwrap container">
+    <div class="brand">
+      <div class="brandmark">
+        <img src="https://images.unsplash.com/photo-15185319330 ability-to-be-changed-later-placeholder?auto=format&fit=crop&q=80&w=100" alt="Logo" style="width:100%;height:100%;border-radius:15px;object-fit:cover;">
+      </div>
+      <div class="brandname">
+        FEHB Organization
+        <small>Empowering Communities</small>
+      </div>
+    </div>
+    <nav class="navlinks">
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#impact">Impact</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="navright">
+      <a href="/admin.html" class="btn light" style="font-size:11px;padding:8px 16px;">Admin Login</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-grid container">
+    <div class="hero-content">
+      <span class="eyebrow">Welcome to FEHB Organization</span>
+      <h1>Building a brighter future through <em>skills and dignity</em>.</h1>
+      <p>We empower vulnerable children and adults in São Tomé and Príncipe through education, vocational training, and humanitarian development.</p>
+      <div class="herobtns">
+        <a href="#programs" class="btn">Explore Programs</a>
+        <a href="#about" class="btn outline" style="color:#fff">Learn More</a>
+      </div>
+      <div class="hero-note">
+        <div class="avatars">
+          <span>J</span><span>M</span><span>A</span>
+        </div>
+        <span>Joined by 500+ community members</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=800" alt="Community Support">
+        <div class="photo-overlay"></div>
+      </div>
+      <div class="floating float-one">
+        <div class="float-number">12+</div>
+        <div class="float-label">Active Programs</div>
+      </div>
+      <div class="floating float-two">
+        <div class="float-icon">★</div>
+        <div class="float-label">Trusted Partner</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trustbar">
+  <div class="container">
+    <div class="trustitem"><b>✓</b> Verified Impact</div>
+    <div class="trustitem"><b>✓</b> Local Empowerment</div>
+    <div class="trustitem"><b>✓</b> Sustainable Growth</div>
+  </div>
+</div>
+
+<section id="about" class="section">
+  <div class="container aboutgrid">
+    <div class="aboutimage">
+      <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=80&w=800" alt="Education">
+      <div class="aboutbadge">Est. 2024</div>
+    </div>
+    <div class="aboutcopy">
+      <span class="kicker">Who We Are</span>
+      <h2>Our Mission & Vision</h2>
+      <p>FEHB Organization is dedicated to breaking the cycle of poverty in São Tomé and Príncipe. We believe that through targeted education and vocational training, every individual can contribute to a thriving, sustainable community.</p>
+      <div class="values">
+        <div class="value"><i>🌱</i> Agriculture</div>
+        <div class="value"><i>🎓</i> Education</div>
+        <div class="value"><i>💻</i> Technology</div>
+        <div class="value"><i>🤝</i> Humanitarian</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="programs" class="section soft">
+  <div class="container">
+    <div class="sectionhead">
+      <span class="kicker">What We Do</span>
+      <h2>Our Core Programs</h2>
+      <p>Focused initiatives designed to create lasting change.</p>
+    </div>
+    <div class="programs">
+      <div class="program">
+        <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&q=80&w=400" alt="Education">
+        <div class="programbody">
+          <div class="programicon">🎓</div>
+          <h3>Vocational Skills</h3>
+          <p>Hands-on training in trades that drive local economic growth.</p>
+          <a href="#" class="textlink">Read More →</a>
+        </div>
+      </div>
+      <div class="program">
+        <img src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?auto=format&fit=crop&q=80&w=400" alt="Agriculture">
+        <div class="programbody">
+          <div class="programicon">🌱</div>
+          <h3>Sustainable Ag</h3>
+          <p>Teaching modern, eco-friendly farming techniques for food security.</p>
+          <a href="#" class="textlink">Read More →</a>
+        </div>
+      </div>
+      <div class="program">
+        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=400" alt="Technology">
+        <div class="programbody">
+          <div class="programicon">💻</div>
+          <h3>Digital Literacy</h3>
+          <p>Bridging the digital divide through technology and computer education.</p>
+          <a href="#" class="textlink">Read More →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="impact" class="section">
+  <div class="container">
+    <div class="impactgrid">
+      <div class="impactstats">
+        <div class="impactstat"><strong>500+</strong><span>Lives Impacted</span></div>
+        <div class="impactstat"><strong>12</strong><span>Local Schools</span></div>
+        <div class="impactstat"><strong>85%</strong><span>Success Rate</span></div>
+        <div class="impactstat"><strong>4</strong><span>Key Sectors</span></div>
+      </div>
+      <div class="impact-content">
+        <span class="kicker" style="color:#c5e7d7">Our Results</span>
+        <h2 style="color:#fff">Real Change, Real People.</h2>
+        <p style="color:#d5e9df">We don't just provide aid; we provide tools for self-reliance. Our impact is measured by the growing independence of the communities we serve.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section soft">
+  <div class="container">
+    <div class="contactgrid">
+      <div class="contactinfo">
+        <span class="kicker">Get In Touch</span>
+        <h2>Let's Connect</h2>
+        <p>Have questions about our programs or want to support our mission? Reach out to us.</p>
+        <div class="contactline"><b>📍</b> São Tomé and Príncipe</div>
+        <div class="contactline"><b>✉️</b> info@fehborganization.org</div>
+        <div class="contactline"><b>📞</b> +239 000 0000</div>
+      </div>
+      <div class="contactform">
+        <div class="field full">
+          <label>Full Name</label>
+          <input type="text" placeholder="Your Name">
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input type="email" placeholder="Email Address">
+        </div>
+        <div class="field">
+          <label>Subject</label>
+          <input type="text" placeholder="How can we help?">
+        </div>
+        <div class="field full">
+          <label>Message</label>
+          <textarea placeholder="Your message..."></textarea>
+        </div>
+        <button class="btn full" style="grid-column: 1/-1;">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footergrid">
+      <div class="footer-brand">
+        <div class="brandname" style="color:#fff; font-size:18px; margin-bottom:15px;">FEHB Organization</div>
+        <p>Empowering the next generation through dignity, education, and sustainable development.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#about">About Us</a>
+        <a href="#programs">Programs</a>
+        <a href="#impact">Our Impact</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Our Sectors</h4>
+        <a href="#">Beauty</a>
+        <a href="#">Agriculture</a>
+        <a href="#">Education</a>
+        <a href="#">Technology</a>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <a href="#">Facebook</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+    <div class="copyright">
+      <div>&copy; 2026 FEHB Organization. All rights reserved.</div>
+      <div>Built with Purpose.</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
