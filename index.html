@@ -1,0 +1,531 @@
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FEHB Organization | Building Skills, Creating Opportunities</title>
+  <meta name="description" content="FEHB Organization supports children, youth and families in São Tomé and Príncipe through education, vocational training, sustainable livelihoods and humanitarian programs.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#102b46">
+
+  <link rel="canonical" href="https://fehborganization.org/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FEHB Organization">
+  <meta property="og:url" content="https://fehborganization.org/">
+  <meta property="og:title" content="FEHB Organization | Building Skills, Creating Opportunities">
+  <meta property="og:description" content="Community-led programs for education, vocational training, sustainable livelihoods and humanitarian support in São Tomé and Príncipe.">
+  <meta property="og:image" content="https://fehborganization.org/assets/fehb-logo.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FEHB Organization | Building Skills, Creating Opportunities">
+  <meta name="twitter:description" content="Community-led programs for education, vocational training, sustainable livelihoods and humanitarian support in São Tomé and Príncipe.">
+  <meta name="twitter:image" content="https://fehborganization.org/assets/fehb-logo.jpeg">
+
+  <link rel="icon" type="image/jpeg" href="assets/fehb-logo.jpeg">
+  <link rel="apple-touch-icon" href="assets/fehb-logo.jpeg">
+
+  <style>
+    :root{
+      --navy:#102b46;--navy-2:#173b5c;--green:#18745d;--green-dark:#105c49;
+      --gold:#e7b95d;--ink:#1d2b38;--muted:#607284;--paper:#f4f7f5;
+      --line:#dfe7e3;--white:#fff;--radius:10px;--width:1160px;--gutter:20px;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
+    body{
+      margin:0;color:var(--ink);background:var(--white);
+      font:16px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      -webkit-font-smoothing:antialiased;
+    }
+    img{max-width:100%;display:block;height:auto}
+    a{color:inherit;text-decoration:none}
+    button,input,textarea,select{font:inherit;color:inherit}
+    h1,h2,h3{margin:0 0 .5em;line-height:1.2;color:var(--navy);font-weight:800;letter-spacing:-.01em}
+    h1{font-size:clamp(30px,7vw,54px)}
+    h2{font-size:clamp(24px,4.4vw,36px)}
+    h3{font-size:clamp(18px,2.4vw,21px)}
+    p{margin:0 0 1em}
+    .container{width:min(calc(100% - var(--gutter)*2),var(--width));margin-inline:auto}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .skip-link{position:absolute;left:12px;top:-60px;z-index:100;background:var(--navy);color:#fff;padding:10px 16px;border-radius:6px;transition:top .2s ease}
+    .skip-link:focus{top:12px}
+
+    .topbar{background:var(--navy);color:#deeaef;font-size:12.5px}
+    .topbar-inner{min-height:38px;display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;justify-content:space-between;padding-block:6px}
+    .topbar p{margin:0}
+    .topbar-links{display:flex;gap:18px}
+    .topbar a:hover{color:#fff;text-decoration:underline}
+
+    .header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+    .navwrap{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:0}
+    .logo-frame{display:grid;place-items:center;flex:0 0 46px;width:46px;height:46px;overflow:hidden;border:1px solid var(--line);border-radius:50%;background:#fff}
+    .logo-frame img{width:100%;height:100%;object-fit:cover}
+    .brand-copy{display:flex;flex-direction:column;line-height:1.15;min-width:0}
+    .brand-title{font-size:13.5px;font-weight:800;letter-spacing:.05em;color:var(--navy)}
+    .brand-subtitle{margin-top:4px;font-size:10.5px;font-weight:700;color:var(--muted)}
+    .menu-toggle{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:9px 13px;font-size:13px;font-weight:700;cursor:pointer}
+    .menu-toggle:hover{border-color:var(--green);color:var(--green-dark)}
+    .mainnav{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--line);padding:14px var(--gutter) 22px;box-shadow:0 16px 24px -20px rgba(16,43,70,.5)}
+    .mainnav.open{display:block}
+    .mainnav ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+    .mainnav a{display:block;padding:11px 2px;font-size:15px;font-weight:700;border-bottom:1px solid var(--line)}
+    .mainnav a:hover{color:var(--green-dark)}
+    .nav-actions{display:flex;align-items:center;gap:10px;margin-top:16px}
+    .language-select{border:1px solid var(--line);border-radius:8px;background:#fff;padding:9px 10px;font-size:13px;font-weight:700;cursor:pointer}
+
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:999px;border:1px solid transparent;font-size:14px;font-weight:800;cursor:pointer;text-align:center;transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease}
+    .button-primary{background:var(--green);color:#fff}
+    .button-primary:hover{background:var(--green-dark);transform:translateY(-1px)}
+    .button-outline{background:transparent;color:var(--navy);border-color:var(--navy)}
+    .button-outline:hover{background:var(--navy);color:#fff}
+
+    .hero{background:linear-gradient(180deg,var(--paper) 0%,#fff 100%);padding-block:clamp(32px,6vw,72px)}
+    .hero-grid{display:grid;gap:32px}
+    .eyebrow{display:inline-block;margin-bottom:14px;padding:6px 14px;border-radius:999px;background:rgba(24,116,93,.1);color:var(--green-dark);font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .hero h1 span{display:block}
+    .hero h1 .accent{color:var(--green)}
+    .hero-lead{font-size:clamp(16px,2.2vw,18px);color:var(--muted);max-width:56ch}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+    .hero-media{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:var(--paper);aspect-ratio:4/3}
+    .hero-media img{width:100%;height:100%;object-fit:cover}
+
+    .pillars{background:var(--navy);color:#dce8ee;padding-block:26px}
+    .pillars-grid{display:grid;gap:16px}
+    .pillar{display:flex;align-items:flex-start;gap:12px;font-size:14px;font-weight:600}
+    .pillar-dot{flex:0 0 9px;width:9px;height:9px;margin-top:8px;border-radius:50%;background:var(--gold)}
+
+    .section{padding-block:clamp(44px,7vw,84px)}
+    .section-alt{background:var(--paper)}
+    .section-head{max-width:62ch;margin-bottom:clamp(24px,4vw,40px)}
+    .section-head p{color:var(--muted);margin-bottom:0}
+    .kicker{display:block;margin-bottom:10px;color:var(--green-dark);font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+
+    .about-grid{display:grid;gap:28px}
+    .about-copy p{color:var(--muted)}
+    .about-copy p:last-of-type{margin-bottom:20px}
+    .text-link{display:inline-flex;align-items:center;gap:8px;color:var(--green-dark);font-weight:800;font-size:14.5px;border-bottom:2px solid rgba(24,116,93,.25);padding-bottom:2px}
+    .text-link:hover{border-color:var(--green)}
+
+    .cards{display:grid;gap:18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+    .card:hover{border-color:rgba(24,116,93,.45);transform:translateY(-2px);box-shadow:0 18px 30px -24px rgba(16,43,70,.45)}
+    .card h3{margin-bottom:8px}
+    .card p{margin:0;color:var(--muted);font-size:14.5px}
+    .card-icon{display:grid;place-items:center;width:42px;height:42px;margin-bottom:16px;border-radius:10px;background:rgba(24,116,93,.1);color:var(--green-dark);font-size:19px;font-weight:800}
+
+    .stats{display:grid;gap:14px;margin-top:8px}
+    .stat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 20px;text-align:center}
+    .stat-value{display:block;font-size:clamp(28px,5vw,38px);font-weight:800;color:var(--green-dark);line-height:1.1}
+    .stat-label{display:block;margin-top:8px;font-size:13px;font-weight:600;color:var(--muted)}
+
+    .contact-grid{display:grid;gap:28px}
+    .contact-info{display:flex;flex-direction:column;gap:14px;margin-top:22px}
+    .contact-item{display:flex;align-items:center;gap:12px;font-size:14.5px;font-weight:600}
+    .contact-item .ico{display:grid;place-items:center;flex:0 0 38px;width:38px;height:38px;border-radius:50%;background:rgba(24,116,93,.1);color:var(--green-dark)}
+    .contact-item a:hover{color:var(--green-dark);text-decoration:underline}
+    .contact-form{display:grid;gap:16px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+    .field{display:flex;flex-direction:column;gap:7px}
+    .field label{font-size:12.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--navy)}
+    .field input,.field textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:#fbfdfc;font-size:15px}
+    .field input:focus,.field textarea:focus{outline:none;border-color:var(--green);background:#fff;box-shadow:0 0 0 3px rgba(24,116,93,.14)}
+    .field textarea{min-height:130px;resize:vertical}
+    .form-note{margin:0;font-size:13.5px;font-weight:600;min-height:1.2em}
+    .form-note.success{color:var(--green-dark)}
+    .form-note.error{color:#b3261e}
+    .contact-form .button{width:100%}
+
+    .footer{background:var(--navy);color:#c9d9e3;padding-block:clamp(36px,6vw,60px) 24px}
+    .footer-grid{display:grid;gap:28px}
+    .footer-brand .logo-frame{background:#fff;border-color:transparent}
+    .footer h3{color:#fff;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+    .footer p{font-size:14px;margin:14px 0 0;color:#a9c0cf}
+    .footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+    .footer a{font-size:14px;color:#c9d9e3}
+    .footer a:hover{color:#fff;text-decoration:underline}
+    .footer-bottom{margin-top:32px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;font-size:12.5px;color:#9fb6c6}
+
+    @media (min-width:600px){
+      .pillars-grid{grid-template-columns:repeat(3,1fr)}
+      .stats{grid-template-columns:repeat(2,1fr)}
+      .contact-form{padding:28px}
+      .contact-form .button{width:auto;justify-self:start}
+    }
+    @media (min-width:820px){
+      :root{--gutter:28px}
+      .cards{grid-template-columns:repeat(3,1fr)}
+      .about-grid{grid-template-columns:1.15fr .85fr;align-items:start}
+      .contact-grid{grid-template-columns:1fr 1.1fr;align-items:start}
+      .footer-grid{grid-template-columns:1.4fr 1fr 1fr 1fr}
+      .hero-grid{grid-template-columns:1.05fr .95fr;align-items:center;gap:44px}
+      .hero-media{aspect-ratio:5/4}
+    }
+    @media (min-width:960px){
+      :root{--gutter:32px}
+      .menu-toggle{display:none}
+      .mainnav{display:flex;position:static;padding:0;border:0;box-shadow:none;background:transparent}
+      .mainnav ul{flex-direction:row;align-items:center;gap:26px}
+      .mainnav a{border:0;padding:6px 0;font-size:13.5px;position:relative}
+      .mainnav a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform .2s ease}
+      .mainnav a:hover::after{transform:scaleX(1)}
+      .nav-actions{margin-top:0}
+      .stats{grid-template-columns:repeat(4,1fr)}
+      .navwrap{min-height:82px}
+    }
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <p>Building Skills. Creating Opportunities. Helping Communities.</p>
+      <nav class="topbar-links" aria-label="Secondary">
+        <a href="#contact">Contact us</a>
+        <a href="#accountability">Reports</a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container navwrap">
+      <a class="brand" href="#home" aria-label="FEHB Organization — home">
+        <span class="logo-frame">
+          <img src="assets/fehb-logo.jpeg" alt="FEHB Organization logo" width="46" height="46">
+        </span>
+        <span class="brand-copy">
+          <span class="brand-title">FEHB ORGANIZATION</span>
+          <span class="brand-subtitle">Building skills. Creating opportunities.</span>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mainnav" aria-label="Open menu">Menu</button>
+
+      <nav class="mainnav" id="mainnav" aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#impact">Impact</a></li>
+          <li><a href="#accountability">Accountability</a></li>
+        </ul>
+        <div class="nav-actions">
+          <label class="sr-only" for="language-select">Choose language</label>
+          <select class="language-select" id="language-select">
+            <option value="en">EN</option>
+            <option value="fr">FR</option>
+            <option value="pt">PT</option>
+            <option value="es">ES</option>
+          </select>
+          <a class="button button-primary" href="#contact">Donate</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">A community-rooted organization in São Tomé and Príncipe</span>
+          <h1>
+            <span>Building Skills.</span>
+            <span class="accent">Creating Opportunities.</span>
+          </h1>
+          <p class="hero-lead">
+            We support children, youth and families through education, practical skills,
+            sustainable livelihoods and compassionate community programs.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#programs">Explore our work</a>
+            <a class="button button-outline" href="#contact">Support our mission</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=85"
+               alt="Community members working together" width="900" height="675">
+        </div>
+      </div>
+    </section>
+
+    <section class="pillars" aria-label="Our focus">
+      <div class="container pillars-grid">
+        <div class="pillar"><span class="pillar-dot" aria-hidden="true"></span>Community-led development</div>
+        <div class="pillar"><span class="pillar-dot" aria-hidden="true"></span>Practical skills and education</div>
+        <div class="pillar"><span class="pillar-dot" aria-hidden="true"></span>Transparent humanitarian support</div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <span class="kicker">Who we are</span>
+          <h2>Local action. Lasting change.</h2>
+          <p>
+            FEHB Organization is a community-focused nonprofit working in São Tomé and Príncipe.
+            We create practical opportunities for people to learn, grow and contribute to their communities.
+          </p>
+          <p>
+            Our approach combines education, vocational training, sustainable livelihoods,
+            entrepreneurship and humanitarian support with the voices and needs of local people.
+          </p>
+          <a class="text-link" href="#accountability">Learn about our commitments <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-media">
+          <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=900&q=80"
+               alt="Young people learning together" loading="lazy" width="900" height="675">
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="programs">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Our work</span>
+          <h2>Programs designed for real needs</h2>
+          <p>Every initiative is built around dignity, participation and useful long-term outcomes.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">◆</div>
+            <h3>Skills &amp; Vocational Training</h3>
+            <p>Hands-on learning that prepares young people for work, entrepreneurship and independent futures.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">◆</div>
+            <h3>Sustainable Livelihoods</h3>
+            <p>Community farming and small-business support that strengthen income and food security.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">◆</div>
+            <h3>Education &amp; Youth Development</h3>
+            <p>Access to learning, mentoring and technology for children and young people to thrive.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="impact">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Our impact</span>
+          <h2>Growing stronger communities</h2>
+          <p>
+            We measure success by the confidence, capabilities and opportunities people gain —
+            and by the ability of communities to sustain progress themselves.
+          </p>
+        </div>
+        <div class="stats">
+          <div class="stat"><span class="stat-value">500+</span><span class="stat-label">People reached through community programs</span></div>
+          <div class="stat"><span class="stat-value">15+</span><span class="stat-label">Local partnerships and initiatives</span></div>
+          <div class="stat"><span class="stat-value">4</span><span class="stat-label">Core areas of community support</span></div>
+          <div class="stat"><span class="stat-value">100%</span><span class="stat-label">Committed to responsible action</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="accountability">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Our commitments</span>
+          <h2>Trust is built through action</h2>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">✓</div>
+            <h3>Transparent Use of Funds</h3>
+            <p>Clear reporting and responsible management ensure support reaches the communities it is intended to serve.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">✓</div>
+            <h3>Community Participation</h3>
+            <p>Residents help identify needs and shape the programs designed to address them.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">✓</div>
+            <h3>Inclusive &amp; Ethical</h3>
+            <p>Respect, fairness and inclusion guide every relationship and decision.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <span class="kicker">Get in touch</span>
+          <h2>Let’s make a difference together</h2>
+          <p style="color:var(--muted)">
+            Whether you want to partner, volunteer or support a program, we would be glad to hear from you.
+          </p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <span class="ico" aria-hidden="true">✉</span>
+              <a href="mailto:info@fehborganization.org">info@fehborganization.org</a>
+            </div>
+            <div class="contact-item">
+              <span class="ico" aria-hidden="true">⌖</span>
+              <span>São Tomé and Príncipe</span>
+            </div>
+            <div class="contact-item">
+              <span class="ico" aria-hidden="true">☎</span>
+              <a href="https://wa.me/2399860074?text=Hello%20FEHB%20Organization" target="_blank" rel="noopener">WhatsApp us</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject">
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+          <button class="button button-primary" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <span class="logo-frame">
+              <img src="assets/fehb-logo.jpeg" alt="" width="46" height="46">
+            </span>
+            <span class="brand-copy">
+              <span class="brand-title" style="color:#fff">FEHB ORGANIZATION</span>
+            </span>
+          </div>
+          <p>Building skills. Creating opportunities. Supporting communities.</p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#impact">Impact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Get involved</h3>
+          <ul>
+            <li><a href="#contact">Partner with us</a></li>
+            <li><a href="#contact">Volunteer</a></li>
+            <li><a href="#contact">Donate</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="mailto:info@fehborganization.org">Email</a></li>
+            <li><a href="#contact">Contact us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 FEHB Organization</span>
+        <span>All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var translations = { en: 'Community', fr: 'Communauté', pt: 'Comunidade', es: 'Comunidad' };
+
+      var menuToggle = document.getElementById('menu-toggle');
+      var mainNav = document.getElementById('mainnav');
+      var languageSelect = document.getElementById('language-select');
+
+      function closeMenu() {
+        mainNav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Open menu');
+      }
+
+      menuToggle.addEventListener('click', function () {
+        var open = mainNav.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(open));
+        menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+
+      mainNav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeMenu();
+      });
+
+      function setLanguage(language) {
+        if (!translations[language]) language = 'en';
+        document.documentElement.lang = language;
+        languageSelect.value = language;
+        var community = document.querySelector('[data-i18n="community"]');
+        if (community) community.textContent = translations[language];
+        try { localStorage.setItem('fehb-language', language); } catch (e) {}
+      }
+
+      languageSelect.addEventListener('change', function (e) {
+        setLanguage(e.target.value);
+      });
+
+      var saved = 'en';
+      try { saved = localStorage.getItem('fehb-language') || 'en'; } catch (e) {}
+      setLanguage(saved);
+
+      var form = document.getElementById('contact-form');
+      var formNote = document.getElementById('form-note');
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        var name = document.getElementById('name').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var subject = document.getElementById('subject').value.trim() || 'Message from FEHB website';
+        var message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !message) {
+          formNote.className = 'form-note error';
+          formNote.textContent = 'Please complete your name, email address and message.';
+          return;
+        }
+
+        var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+
+        formNote.className = 'form-note';
+        formNote.textContent = 'Opening your email application…';
+
+        window.location.href = 'mailto:info@fehborganization.org'
+          + '?subject=' + encodeURIComponent(subject)
+          + '&body=' + encodeURIComponent(body);
+      });
+    })();
+  </script>
+</body>
+</html>
