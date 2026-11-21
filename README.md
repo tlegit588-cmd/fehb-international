@@ -1,45 +1,37 @@
-# FEHB International — Platform API foundation
+# FEHB International website redesign
 
-This is the first isolated foundation for the private FEHB management platform. It does **not** replace the existing public website or its current Cloudflare Pages deployment.
+## Files
+- `index.html` — homepage structure and SEO/social metadata
+- `styles.css` — responsive navy, emerald and gold design
+- `script.js` — mobile navigation, four complete interface languages, language preference and email-based contact form
+- `assets/fehb-logo.jpeg` — add the official FEHB logo here (same filename)
 
-## Stack
+## Before publishing
+1. Replace `assets/fehb-logo.jpeg` with the approved FEHB logo. If your current logo has another filename, either rename it to `fehb-logo.jpeg` or update the three references in `index.html`.
+2. Confirm the email address `info@fehborganization.org` and WhatsApp number `2399860074`.
+3. Confirm the organization’s official legal name and public wording.
+4. Replace the two Unsplash photos with FEHB-owned or properly licensed photographs when available.
+5. Do not publish impact numbers unless they are supported by verified records. This redesign intentionally avoids unverified statistics.
+6. The contact form uses `mailto:`. It opens the visitor's email app and does not store messages. A Cloudflare Worker + D1 integration is a separate backend step.
 
-- Cloudflare Workers + TypeScript for the API runtime
-- Cloudflare D1 (SQLite) for structured records; schema is in `migrations/`
-- Cloudflare R2 is reserved for private files after access controls and consent workflows are implemented
-- Wrangler for local development and deployment
+## Test locally
+Open `index.html` in a browser. For best results, upload the whole folder to your hosting provider. No build command or package installation is required.
 
-## Current status
+## Cloudflare Pages deployment from GitHub
+The earlier FEHB Pages setup used a static site configuration (framework preset: None, no build command, output directory `/`). For this package:
+1. Download and extract `fehb-website-redesign.zip`.
+2. Open your GitHub repository `tlegit588-cmd/FEBH`.
+3. Upload the contents of the extracted folder to the repository's website root. The root should contain `index.html`, `styles.css`, `script.js`, `README.md`, and `assets/fehb-logo.jpeg`. Do not upload only the ZIP file.
+4. Commit the changes to the main branch.
+5. In Cloudflare, open **Workers & Pages → Pages → your FEHB Pages project**.
+6. If it is already connected to GitHub, open **Deployments** and wait for the new commit to build. If it is not connected, choose **Create application → Pages → Connect to Git**, select `tlegit588-cmd/FEBH`, and select the production branch (usually `main`).
+7. Set **Framework preset: None**, **Build command: leave blank**, and **Build output directory: /**. Save and deploy.
+8. Open the generated `pages.dev` address and test the homepage, navigation, all four languages, images and contact form.
+9. In the Pages project, open **Custom domains → Set up a custom domain** and add `fehborganization.org`. Follow the exact DNS instructions Cloudflare displays. Do not change nameservers or delete existing DNS records based on guesswork; preserve any records used for email.
+10. Repeat the custom-domain setup for `www.fehborganization.org` if you want the www version, then choose one canonical version and configure a redirect if required.
+11. Test `https://fehborganization.org` in a private browser tab after DNS and certificate provisioning complete.
 
-- `GET /api/health` returns service health.
-- Other `/api/*` routes intentionally return `501` until authentication, authorization, validation, and database bindings are configured.
-- The D1 schema is a starting point, not a live database.
-- No staff login or beneficiary record is active yet.
-
-## Local setup
-
-Requires a current Node.js LTS release.
-
-```bash
-npm install
-npm run dev
-```
-
-Open `http://localhost:8787/api/health`.
-
-## Before connecting production data
-
-1. Create a D1 database in the FEHB Cloudflare account.
-2. Add its binding to `wrangler.jsonc` as `FEHB_D1` and add the matching `database_id`.
-3. Apply the SQL migration to a development database first, inspect it, then apply to production.
-4. Implement staff authentication and role checks before exposing management routes.
-5. Add rate limiting, request validation, CSRF protection for cookie-based sessions, and audit logging to every sensitive mutation.
-6. Configure private R2 storage only when file-level authorization and retention rules are ready.
-
-## Data protection rules
-
-- Never commit secrets, API tokens, passwords, tax identifiers, identity scans, or private beneficiary documents.
-- Collect only information required to deliver a programme.
-- Obtain guardian consent before processing or publishing identifiable information about children.
-- Public gallery images require documented permission; do not use beneficiary records as public website content.
-- Keep the management API separate from public website routes.
+## Important deployment notes
+- The domain shown in the supplied HTML is `fehborganization.org`; use this exact spelling consistently.
+- Do not expose API keys or database credentials in HTML, CSS or JavaScript.
+- This is a static public website. It does not yet include an admin dashboard, donations processing, secure login, or a server-side enquiry database.
