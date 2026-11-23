@@ -1,4 +1,4 @@
-# FEHB International website redesign
+# FEHB Organization website redesign
 
 ## Files
 - `index.html` — homepage structure and SEO/social metadata
