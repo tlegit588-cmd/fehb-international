@@ -44,3 +44,6 @@
   .floating-whatsapp{right:15px;bottom:16px;width:56px;height:56px;min-height:56px;padding:0}
   .floating-whatsapp span{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 }
+
+/* Strategic affiliate section */
+.partners-section{background:#f4f7f4}.partners-heading{max-width:760px;margin-bottom:34px}.partners-heading>p{max-width:700px;color:var(--muted)}.affiliate-card{display:grid;grid-template-columns:160px 1fr;gap:30px;align-items:center;padding:34px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:var(--shadow)}.affiliate-monogram{width:132px;height:132px;display:grid;place-items:center;border-radius:50%;background:var(--navy);border:5px solid var(--gold);color:var(--gold);font:800 54px Manrope}.affiliate-label{color:var(--green);font-size:10px;font-weight:800;letter-spacing:.15em}.affiliate-copy h3{margin:9px 0;font-size:27px}.affiliate-copy p{max-width:760px;color:var(--muted);font-size:13px}.affiliate-copy .btn{margin-top:8px}@media(max-width:700px){.affiliate-card{grid-template-columns:1fr;padding:24px}.affiliate-monogram{width:96px;height:96px;font-size:40px}}
