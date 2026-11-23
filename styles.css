@@ -14,3 +14,33 @@
 @media(max-width:960px){:root{--gutter:26px}.menu-toggle{display:flex}.primary-nav{display:none;position:absolute;left:0;right:0;top:100%;padding:18px var(--gutter) 24px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 20px 30px rgba(16,43,70,.1);align-items:stretch;gap:0}.primary-nav.open{display:flex;flex-direction:column}.primary-nav>a{padding:12px 0;border-bottom:1px solid var(--line)}.primary-nav>a:after{display:none}.nav-tools{padding-top:16px;justify-content:space-between}.hero-layout{gap:38px}.pillar-card{grid-column:span 3}.pillar-card:nth-child(4){grid-column:span 3}.pillar-card:nth-child(5){grid-column:span 3}.footer-main{grid-template-columns:1.3fr 1fr 1fr}.footer-location{display:none}}
 @media(max-width:700px){:root{--gutter:20px}.utility-inner{min-height:35px;font-size:10px}.utility-inner a{display:none}.header-inner{min-height:72px}.brand-mark{width:42px;height:42px;flex-basis:42px}.brand-name strong{font-size:12px}.brand-name small{font-size:9px}.hero{padding-top:52px}.hero-layout{grid-template-columns:1fr;gap:38px}.hero h1{font-size:clamp(2.7rem,12vw,4.2rem)}.hero-visual{max-width:520px;margin:auto;width:100%;padding-right:7px}.hero-image-main{height:390px;border-radius:150px 150px 16px 16px}.visual-label{left:-5px}.visual-stamp{right:0}.hero-bottom{flex-wrap:wrap;gap:9px}.hero-bottom-line{width:28px}.hero-bottom strong{width:100%;padding-left:0}.trust-grid{grid-template-columns:1fr}.trust-grid>div,.trust-grid>div:first-child{padding:15px 0;border-right:0;border-bottom:1px solid rgba(255,255,255,.12)}.trust-grid>div:last-child{border-bottom:0}.about-layout,.approach-layout,.contact-layout{grid-template-columns:1fr;gap:24px}.about-content{padding-top:0}.about-image-row{grid-template-columns:1fr;margin-top:38px}.about-photo{height:245px}.about-quote{min-height:240px}.section-heading-row{display:block}.section-heading-row>p{margin-top:17px}.pillar-grid{display:grid;grid-template-columns:1fr;gap:12px}.pillar-card,.pillar-card:nth-child(4),.pillar-card:nth-child(5){grid-column:auto;min-height:245px}.cta-inner{display:block}.cta-inner .btn{margin-top:24px}.form-row{grid-template-columns:1fr}.footer-main{grid-template-columns:1fr 1fr;gap:30px 20px}.footer-about{grid-column:1/-1}.footer-bottom{padding:17px 0;align-items:flex-start;flex-direction:column}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;scroll-behavior:auto!important}}
+
+
+/* Floating WhatsApp contact shortcut */
+.floating-whatsapp{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:1000;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:56px;
+  padding:0 19px;
+  border:2px solid rgba(255,255,255,.9);
+  border-radius:999px;
+  background:#20b968;
+  color:#fff;
+  box-shadow:0 10px 28px rgba(0,0,0,.22);
+  font:700 14px/1 "DM Sans",sans-serif;
+  text-decoration:none;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+}
+.floating-whatsapp svg{width:27px;height:27px;fill:currentColor;flex:0 0 27px}
+.floating-whatsapp:hover{background:#159b55;transform:translateY(-3px);box-shadow:0 14px 32px rgba(0,0,0,.26)}
+.floating-whatsapp:focus-visible{outline:3px solid #d9b65e;outline-offset:4px}
+@media(max-width:700px){
+  .floating-whatsapp{right:15px;bottom:16px;width:56px;height:56px;min-height:56px;padding:0}
+  .floating-whatsapp span{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+}
