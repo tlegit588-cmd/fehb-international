@@ -1,4 +1,3 @@
-
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "fehb-admin",
@@ -7,6 +6,9 @@
   "observability": {
     "enabled": true
   },
+  "vars": {
+    "ALLOWED_ORIGIN": "https://fehborganization.org,https://admin.fehborganization.org"
+  },
   "d1_databases": [
     {
       "binding": "DB",
@@ -14,12 +16,4 @@
       "database_id": "4b560e6e-6f7c-41b4-ac67-fbab61312418"
     }
   ]
-
-{
-  // ...
-  "vars": {
-    "ALLOWED_ORIGIN": "https://fehborganization.org"
-  },
-  // ...
-}
 }
